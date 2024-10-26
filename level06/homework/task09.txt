@@ -1,0 +1,23 @@
+აი, სამი case-insensitive და case-sensitive პროგრამირების ენა:
+
+Case-insensitive:
+
+1. SQL
+
+
+2. HTML
+
+
+3. BASIC
+
+
+
+Case-sensitive:
+
+1. Java
+
+
+2. C++
+
+
+3. Python
