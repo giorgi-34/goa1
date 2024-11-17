@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+
+
+
+
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: right;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps the header above other content */
+}
+
+/* Styling for links in the header */
+header a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 18px;
+}
+
+header a:hover {
+    background-color: #575757;
+}
+
+/* Page content to demonstrate scrolling */
+
+
+img{
+    width: 300px;
+    height: 400px;
+    border-radius:20px ;
+    margin: 90px;
+}
+div{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding-left: 20px;
+}
+footer{
+   background-color: #333;
+
+}
+li{
+    color: white;
+}
+h1{
+    text-align: center;
+    border-style:double;
+    color: aliceblue;
+}

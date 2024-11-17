@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(93, 34, 34);
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: right;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps the header above other content */
+}
+
+/* Styling for links in the header */
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 18px;
+}
+
+header a:hover {
+    background-color: #575757;
+}
+
+/* Page content to demonstrate scrolling */
+footer{
+    background-color: #333;
+ 
+ }
+ li{
+    color: white;
+}
+img{
+    width: 300px;
+    height: 400px;
+    border-radius:20px ;
+    margin: 85px;
+}
+div{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding-left: 300px;
+}
+h1{
+    text-align: center;
+    border-style: hidden;
+    color: aliceblue;
+}
+h2{
+    text-align: center;
+    border-style: hidden;
+    color: aliceblue;
+}
+p{
+    color:rgb(255, 255, 255) ;
+}

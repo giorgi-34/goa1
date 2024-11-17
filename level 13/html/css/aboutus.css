@@ -1,0 +1,45 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+header {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 0;
+    text-align: right;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps the header above other content */
+}
+
+/* Styling for links in the header */
+header a {
+    color: #333;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 18px;
+}
+
+header a:hover {
+    background-color: #575757;
+}
+
+/* Page content to demonstrate scrolling */
+footer{
+    background-color: #333;
+ 
+ }
+ li{
+    color: white;
+}
+p{
+    color: white;
+}
+h2{
+    color: white;
+}
