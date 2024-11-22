@@ -15,4 +15,4 @@ bool3 = True
 print(f"bool1 and bool2 and bool3: {bool1 and bool2 and bool3}")  # AND ოპერატორი: False, რადგან bool2 False-ია
 
 # სამი ბულეანის დაკავშირება OR ოპერატორით
-print(f"bool1 or bool2 or bool3: {bool1 or bool2 or bool3}")  # OR ოპერატორი: True, რადგან bool1 და bool3 True-ები არიან
+print(f"bool1 or bool2 or bool3: {bool1 or bool2 or bool3}")  # OR ოპერატორი: True, რადგან bool1 და bool3 True-ები არია

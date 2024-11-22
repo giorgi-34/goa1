@@ -34,7 +34,6 @@ print("Python")
 
 ამას კი, ციკლის გამოყენებით, რამდენიმე სტრიქონში დავწერდით:
 
-
 ```python
 for _ in range(10):
     print("Python")
