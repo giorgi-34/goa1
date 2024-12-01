@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            background-color: #007bff;
+            padding: 0;
+        }
+
+        .navbar > ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar > ul > li {
+            position: relative;
+        }
+
+        .navbar > ul > li > a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar > ul > li > a:hover {
+            background-color: #0056b3;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            z-index: 1000;
+        }
+
+        .dropdown li {
+            width: 200px;
+        }
+
+        .dropdown li a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown li a:hover {
+            background-color: #444;
+        }
+
+        .navbar > ul > li:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="#">Categories</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul class="dropdown">
+                    <li><a href="#">Service One</a></li>
+                    <li><a href="#">Service Two</a></li>
+                    <li><a href="#">Service Three</a></li>
+                    <li><a href="#">Service Four</a></li>
+                    <li><a href="#">Service Five</a></li>
+                    <li><a href="#">Service Six</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
