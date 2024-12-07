@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Enthusiast Hub</title>
+    <style>
+        /* General reset and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and font settings */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            padding: 14px 20px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            padding: 14px 20px;
+            background-color: #444;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Section styling */
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        section p, section ul, section ol {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        /* Image gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Form Styling */
+        form input, form textarea, form select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1.1em;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav a {
+                padding: 12px 18px;
+                font-size: 1em;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            section {
+                margin: 10px;
+            }
+
+            header {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav a {
+                padding: 10px 14px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                font-size: 1.2em;
+            }
+
+            footer {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Car Enthusiast Hub</h1>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#cars">Cars</a>
+    <a href="#media">Media</a>
+    <a href="#reviews">Reviews</a>
+    <div class="dropdown">
+        <button class="dropbtn">More</button>
+        <div class="dropdown-content">
+            <a href="#history">History</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <section id="about">
+        <h2>About Car Enthusiast Hub</h2>
+        <p><strong>Welcome</strong> to the ultimate hub for all car lovers! From classic to modern cars, we cover everything. Explore the best models, the latest news, and even review some of the most iconic vehicles ever made. Whether you're into sports cars, electric vehicles, or classic rides, this site has it all!</p>
+        <p><u>Stay tuned</u> for weekly updates, exclusive interviews, and behind-the-scenes access to the world of cars!</p>
+        <hr>
+    </section>
+
+    <section id="cars">
+        <h2>Popular Car Models</h2>
+        <p><strong>From speed to luxury, we have it all. Below are some of the best car models!</strong></p>
+
+        <h3>Top 3 Sports Cars</h3>
+        <ol>
+            <li>Porsche 911</li>
+            <li>Ferrari 488 GTB</li>
+            <li>Lamborghini Huracan</li>
+        </ol>
+
+        <h3>Top 3 Electric Cars</h3>
+        <ol>
+            <li>Tesla Model S</li>
+            <li>Rivian R1T</li>
+            <li>Lucid Air</li>
+        </ol>
+
+        <h3>Top 3 Classic Cars</h3>
+        <ol>
+            <li>Ford Mustang</li>
+            <li>Chevrolet Corvette</li>
+            <li>Jaguar E-Type</li>
+        </ol>
+
+        <hr>
+
+        <h3>Car Features</h3>
+        <ul>
+            <li>Hybrid Engines</li>
+            <li>Autonomous Driving</li>
+            <li>High-performance Engines</li>
+            <li>Luxury Interiors</li>
+        </ul>
+    </section>
+
+    <section id="media">
+        <h2>Car Videos & Images</h2>
+
+        <h3>Featured Videos</h3>
+        <video width="320" height="240" controls>
+            <source src="car-test-drive.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br><br>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/T3lG9Bddc00" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <hr>
+
+        <h3>Car Image Gallery</h3>
+        <div class="gallery">
+            <img src="car1.jpg" alt="Porsche 911">
+            <img src="car2.jpg" alt="Ferrari 488 GTB">
+            <img src="car3.jpg" alt="Lamborghini Huracan">
+            <img src="car4.jpg" alt="Tesla Model S">
+            <img src="car5.jpg" alt="Rivian R1T">
+            <img src="car6.jpg" alt="Lucid Air">
+            <img src="car7.jpg" alt="Ford Mustang">
+            <img src="car8.jpg" alt="Chevrolet Corvette">
+            <img src="car9.jpg" alt="Jaguar E-Type">
+            <img src="car10.jpg" alt="BMW i8">
+        </div>
+
+        <hr>
+
+        <h3>Car Sound Clips</h3>
+        <audio controls>
+            <source src="car-engine-start.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <br><br>
+        <audio controls>
+            <source src="car-acceleration.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section id="reviews">
+        <h2>Submit Your Review</h2>
+
+        
