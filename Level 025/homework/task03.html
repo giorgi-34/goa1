@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>დავირუსებული საიტი</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #e74c3c;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 20px 30px;
+            font-size: 18px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+
+        #cleanButton {
+            background-color: #2ecc71;
+        }
+
+        #cleanButton:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>⚠️ თქვენი კომპიუტერი ვირუსებით გაივსო!</h1>
+
+    <div class="container">
+        <!-- ვირუსული ღილაკები -->
+        <button onclick="showVirusAlert()">ღილაკი 1</button>
+        <button onclick="showVirusAlert()">ღილაკი 2</button>
+        <button onclick="showVirusAlert()">ღილაკი 3</button>
+        <button onclick="showVirusAlert()">ღილაკი 4</button>
+        <button onclick="showVirusAlert()">ღილაკი 5</button>
+
+        <!-- გასუფთავების ღილაკი -->
+        <button id="cleanButton" onclick="cleanComputer()">გასუფთავება</button>
+    </div>
+
+    <script>
+        // ვირუსების ალერტი ყველა ღილაკზე
+        function showVirusAlert() {
+            alert("⚠️ თქვენი კომპიუტერი ვირუსებით გაივსო!");
+        }
+
+        // გასუფთავების ღილაკი
+        function cleanComputer() {
+            alert("🚫 ვირუსები წარმატებით გაიწმინდა! კომპიუტერი ახლა უსაფრთხოა.");
+        }
+    </script>
+
+</body>
+</html>

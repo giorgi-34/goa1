@@ -1,0 +1,21 @@
+/* Common styles for <p>, <h1>, and <button> */
+p, h1, button {
+    font-family: Arial, sans-serif;
+    color: darkblue;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Additional styling for the <button> */
+button {
+    background-color: lightgreen; /* Give the button a background color */
+    border: 2px solid darkgreen; /* Add a border to the button */
+    padding: 10px 20px; /* Increase padding for the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Add hover effect to button */
+button:hover {
+    background-color: darkgreen;
+    color: white;
+}

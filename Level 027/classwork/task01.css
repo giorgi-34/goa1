@@ -1,0 +1,11 @@
+/* Demo ელემენტის სტილიზაცია */
+.demo-element {
+    color: white;              /* ტექსტის ფერი */
+    background-color: #3498db; /* ფონის ფერი */
+    text-align: center;        /* ტექსტის განლაგება (ცენტრში) */
+    font-size: 20px;           /* ტექსტის ზომა */
+    font-weight: bold;         /* ტექსტის სისქე */
+    border: 2px solid #2c3e50; /* საზღვარი */
+    padding: 20px;             /* შიდა შევსება */
+    margin: 20px;              /* გარე შევსება */
+}

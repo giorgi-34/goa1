@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მარტივი საიტი</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        nav {
+            margin: 20px;
+            background-color: #3498db;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .form-container {
+            margin-top: 30px;
+        }
+
+        input[type="text"], input[type="tel"] {
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+
+        #facebookLink {
+            font-size: 18px;
+            color: #3b5998;
+            text-decoration: none;
+        }
+
+        #facebookLink:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        // Alert-ი ნებისმიერი ტექსტის გამოსატანად
+        function showAlert(message) {
+            alert(message);
+        }
+    </script>
+</head>
+<body>
+
+    <h1>მარტივი საიტი</h1>
+
+    <!-- ნავიგაციის ლინკები -->
+    <nav>
+        <a href="#home">მთავარი</a>
+        <a href="#about">ჩვენ შესახებ</a>
+        <a href="#services">მომსახურებები</a>
+    </nav>
+
+    <!-- Facebook ლინკი -->
+    <p>
+        <a id="facebookLink" href="https://www.facebook.com" target="_blank">ჩემი Facebook პროფილი</a>
+    </p>
+
+    <!-- Alert ღილაკები -->
+    <button onclick="showAlert('თქვენ დააჭირეთ ღილაკს!')">ღილაკი 1</button>
+    <button onclick="showAlert('ეს არის მეორე ღილაკი!')">ღილაკი 2</button>
+    <button onclick="showAlert('მესამე ღილაკი და შეტყობინება!')">ღილაკი 3</button>
+
+    <!-- ფორმა სახელისა და ტელეფონის ნომრის შესატანად -->
+    <div class="form-container">
+        <h2>შეიყვანეთ თქვენი ინფორმაცია</h2>
+        <form>
+            <div>
+                <label for="name">სახელი:</label>
+                <input type="text" id="name" name="name" placeholder="შეიყვანეთ თქვენი სახელი" required>
+            </div>
+            <div>
+                <label for="phone">ტელეფონის ნომერი:</label>
+                <input type="tel" id="phone" name="phone" placeholder="შეიყვანეთ თქვენი ტელეფონი" required>
+            </div>
+            <div>
+                <button type="submit">გაგზავნა</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

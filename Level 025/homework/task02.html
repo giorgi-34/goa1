@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ბოსტნეულის მაღაზია</title>
+    <style>
+        /* CSS სტილები */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #27ae60;
+            font-size: 36px;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .vegetable img {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .vegetable img:hover {
+            transform: scale(1.1);
+        }
+
+        .main-photo img {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ბოსტნეულის მაღაზია</h1>
+
+    <!-- მთავარი ფოტო -->
+    <div class="main-photo">
+        <img id="mainImage" src="https://via.placeholder.com/300x300?text=ბოსტნეული" alt="Main Vegetable">
+    </div>
+
+    <!-- ბოსტნეულები -->
+    <div class="container">
+        <div class="vegetable">
+            <img src="https://via.placeholder.com/150x150?text=კარტოფილი" alt="Potato" onclick="changeImage('https://via.placeholder.com/300x300?text=კარტოფილი')">
+        </div>
+        <div class="vegetable">
+            <img src="https://via.placeholder.com/150x150?text=პომიდორი" alt="Tomato" onclick="changeImage('https://via.placeholder.com/300x300?text=პომიდორი')">
+        </div>
+        <div class="vegetable">
+            <img src="https://via.placeholder.com/150x150?text=კიტრი" alt="Cucumber" onclick="changeImage('https://via.placeholder.com/300x300?text=კიტრი')">
+        </div>
+        <div class="vegetable">
+            <img src="https://via.placeholder.com/150x150?text=ხახვი" alt="Onion" onclick="changeImage('https://via.placeholder.com/300x300?text=ხახვი')">
+        </div>
+    </div>
+
+    <script>
+        // JavaScript ფუნქცია, რომელიც შეცვლის მთავარ ფოტოს
+        function changeImage(newSrc) {
+            document.getElementById('mainImage').src = newSrc;
+        }
+    </script>
+
+</body>
+</html>

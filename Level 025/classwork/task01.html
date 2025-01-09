@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ფოტოები და ალერტი</title>
+    <style>
+        img {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="alert('GOA BEST')">ეს არის მთავარი წარწერა</h1>
+    
+    <div>
+        <img id="photo1" src="photo1.jpg" alt="photo1" onclick="changePhoto('photo1')" />
+        <img id="photo2" src="photo2.jpg" alt="photo2" onclick="changePhoto('photo2')" />
+        <img id="photo3" src="photo3.jpg" alt="photo3" onclick="changePhoto('photo3')" />
+    </div>
+
+    <script>
+        // პოტენციური ახალ ფოტოების URLs
+        const newPhotos = {
+            'photo1': 'newPhoto1.jpg',
+            'photo2': 'newPhoto2.jpg',
+            'photo3': 'newPhoto3.jpg'
+        };
+
+        // ფუნქცია, რომელიც შეცვლის ფოტოს
+        function changePhoto(photoId) {
+            const imgElement = document.getElementById(photoId);
+            imgElement.src = newPhotos[photoId];
+        }
+    </script>
+</body>
+</html>

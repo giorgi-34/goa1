@@ -1,0 +1,11 @@
+/* content-block-ის სტილიზაცია */
+.content-block {
+    color: white;                    /* ტექსტის ფერი */
+    background-color: #34495e;       /* ფონის ფერი */
+    text-align: center;              /* ტექსტის განლაგება (ცენტრში) */
+    font-size: 18px;                 /* ტექსტის ზომა */
+    font-weight: bold;               /* ტექსტის სისქე */
+    border: 3px solid #2c3e50;       /* საზღვარი */
+    padding: 20px;                   /* შიდა შევსება */
+    margin: 30px;                    /* გარე შევსება */
+}

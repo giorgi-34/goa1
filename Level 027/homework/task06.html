@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <style>
+        /* --------------------------------------
+           Global Styles
+        -------------------------------------- */
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif; /* გლობალური შრიფტი */
+            background-color: #f4f4f4; /* ფონდის ფერი */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333; /* header-ის ფონდი */
+            color: white; /* ტექსტის ფერი */
+            padding: 20px; /* padding-ი */
+            text-align: center; /* ტექსტის განლაგება */
+        }
+
+        /* Navigation menu styles */
+        nav ul {
+            list-style-type: none; /* სიის პუნქტების მოშლა */
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block; /* ელემენტების განლაგება inline */
+            margin: 0 15px; /* პირადი მანძილი */
+        }
+
+        nav ul li a {
+            color: white; /* ლინკის ფერი */
+            text-decoration: none; /* underline-ის მოხსნა */
+            font-size: 18px; /* ტექსტის ზომა */
+        }
+
+        /* Change link color on hover */
+        nav ul li a:hover {
+            color: #ff6347; /* hover-ის დროს ფერის ცვლილება */
+        }
+
+        /* --------------------------------------
+           Section Styles (Content Cards)
+        -------------------------------------- */
+
+        /* Content section style */
+        .content {
+            display: flex; /* ელემენტების განლაგება სვეტებად */
+            justify-content: space-around; /* სვეტების შორის ადგილი */
+            padding: 20px; /* padding */
+        }
+
+        /* Card styles */
+        .card {
+            background-color: white; /* კარტის ფონდი */
+            border: 1px solid #ddd; /* კარტის ჩარჩო */
+            border-radius: 8px; /* ირგვლივ დასრიალი */
+            padding: 20px; /* padding */
+            width: 30%; /* სვეტის სიგანე */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ჩრდილები */
+            text-align: center; /* ტექსტის ცენტრირება */
+            transition: transform 0.3s ease; /* კარტის ეფექტი */
+        }
+
+        /* Hover effect on cards */
+        .card:hover {
+            transform: translateY(-10px); /* კარტის ტოლობის ეფექტი */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* უფრო ძლიერი ჩრდილები */
+        }
+
+        /* --------------------------------------
+           Footer Styles
+        -------------------------------------- */
+
+        /* Footer styles */
+        footer {
+            background-color: #333; /* footer-ის ფონდი */
+            color: white; /* footer-ის ტექსტის ფერი */
+            text-align: center; /* ტექსტის ცენტრირება */
+            padding: 10px; /* padding */
+            position: fixed; /* footer-ის ფიქსაცია */
+            bottom: 0; /* ფიქსაცია ეკრანის დაბალ ნაწილში */
+            width: 100%; /* სრულ სიგანეზე გაფართოება */
+        }
+
+        /* --------------------------------------
+           Responsive Design
+        -------------------------------------- */
+
+        /* Mobile Styles (when the screen width is less than 768px) */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column; /* სვეტების განლაგება კოლონებად */
+                align-items: center; /* ყველა კარტი ცენტრში განლაგდება */
+            }
+
+            .card {
+                width: 80%; /* კარტის სიგანე მაქსიმალურად ფართო */
+                margin-bottom: 20px; /* მანძილი კარტებს შორის */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>მოდი შევქმნათ ვებ-გვერდი</h1>
+        <nav>
+            <ul>
+                <li><a href="#">მთავარი</a></li>
+                <li><a href="#">სერვისები</a></li>
+                <li><a href="#">კონტაქტი</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <div class="card">
+            <h2>კარტი 1</h2>
+            <p>ეს არის კარტის აღწერა. აქ შეიძლება წეროთ ნებისმიერი ინფორმაცია.</p>
+        </div>
+        <div class="card">
+            <h2>კარტი 2</h2>
+            <p>ეს არის მეორე კარტი, სადაც შეგიძლიათ დამატებით ინფორმაცია განათავსოთ.</p>
+        </div>
+        <div class="card">
+            <h2>კარტი 3</h2>
+            <p>ეს არის მესამე კარტი. ეს დიზაინი სვეტებადაა განლაგებული.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ყველა უფლება დაცულია.</p>
+    </footer>
+
+</body>
+</html>
