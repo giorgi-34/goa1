@@ -1,0 +1,66 @@
+### CSS Specificity (CSS-ის სპეციფიურობა)
+
+**CSS specificity** არის სისტემა, რომელიც განსაზღვრავს, რომელი სტილი ამოქმედდება მაშინ, როცა რამდენიმე სხვადასხვა CSS სელექტორი მიდის ერთსა და იმავე HTML ელემენტზე. ეს მექანიზმი განსაზღვრავს პრიორიტეტს, თუ რომელ სელექტორს უნდა ჰქონდეს უპირატესობა, როდესაც არსებობს კონფლიქტი სტილებს შორის.
+
+CSS-ის სპეციფიკურობა იანგარიშება თითოეული სელექტორის ტიპის მიხედვით. როდესაც რამდენიმე სელექტორი ტარტავს ერთიდაიმავე ელემენტს, ის სელექტორი, რომელსაც ყველაზე მაღალი specificity აქვს, ხდება ამოქმედებული.
+
+### როგორ იანგარიშება specificity
+
+Specificity ითვლება სხვადასხვა კატეგორიაში:
+
+1. **Inline styles**: სტილები, რომლებიც პირდაპირ HTML ელემენტში `style` ატრიბუტით არის გაწერილი, ყოველთვის მაღალ პრიორიტეტს იმსახურებს. ისინი ყველაზე მაღალი specificity-ის მქონე არიან.
+   
+2. **ID selector**: როდესაც იყენებთ ID სელექტორს (მაგალითად, `#header`), მას ერგება მაღალი specificity.
+
+3. **Class, pseudo-class, and attribute selectors**: კლასები, პსევდომათის სელექტორები (მაგალითად, `:hover`) და ატრიბუტის სელექტორები (მაგალითად, `[type="text"]`) შედარებით ნაკლები specificity-ს მოიცავს.
+
+4. **Element and pseudo-element selectors**: ელემენტ სელექტორები (მაგალითად, `div`, `h1`) და პსევდო-ელემენტები (მაგალითად, `::before`) ყველაზე დაბალ specificity-ს მოიცავს.
+
+### CSS specificity-ის პრიორიტეტების სია:
+
+1. **Inline styles** (სტილები HTML-ის `style` ატრიბუტით)  
+   - ყველაზე მაღალი პრიორიტეტი.
+
+2. **ID selectors** (`#id_name`)  
+   - ნაკლები specificity inline სტილებისგან, მაგრამ უფრო მაღალი ვიდრე სხვა სელექტორები.
+
+3. **Class selectors** (`.class_name`), **Pseudo-class selectors** (`:hover`, `:first-child`), **Attribute selectors** (`[type="text"]`)  
+   - მაღალი specificity, მაგრამ ნაკლები ვიდრე ID selectors.
+
+4. **Element selectors** (`div`, `p`, `h1`) და **Pseudo-element selectors** (`::before`, `::after`)  
+   - ყველაზე დაბალი specificity.
+
+### მაგალითი:
+
+```css
+/* ყველაზე დაბალი specificity */
+p {
+    color: blue;
+}
+
+/* მეტი specificity - class selector */
+.button {
+    color: red;
+}
+
+/* უფრო მაღალი specificity - id selector */
+#header {
+    color: green;
+}
+
+/* ყველაზე მაღალი specificity - inline style */
+<p id="header" style="color: yellow;">Hello</p>
+```
+
+**პრიორიტეტი ამ შემთხვევაში იქნება შემდეგი**:
+1. Inline style (`color: yellow`)
+2. ID selector (`#header { color: green; }`)
+3. Class selector (`.button { color: red; }`)
+4. Element selector (`p { color: blue; }`)
+
+### განმარტება:
+- **Inline styles** ყოველთვის აჯობებს ყველა სხვა სელექტორს, რადგან ისინი ყველაზე მაღალი specificity-ს ფლობენ.
+- **ID selectors** გაქვთ მაღალი პრიორიტეტი, მაგრამ მას შემდეგ მოდის **class selectors** და **element selectors**.
+- თუ ორი ან მეტი სელექტორი აქვს იგივე specificity, მაშინ ბოლო (უფრო ახლოს დამდგარი) სტილი გათვალისწინებულია. 
+
+**დასკვნა**: CSS specificity-ში უმნიშვნელოვანესია იმის გაგება, რომ სტილის პრიორიტეტი დამოკიდებულია იმაზე, თუ რომელ სელექტორს მიენიჭა მაღალი specificity.
