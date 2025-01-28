@@ -15,7 +15,7 @@ Specificity ითვლება სხვადასხვა კატეგ
 3. **Class, pseudo-class, and attribute selectors**: კლასები, პსევდომათის სელექტორები (მაგალითად, `:hover`) და ატრიბუტის სელექტორები (მაგალითად, `[type="text"]`) შედარებით ნაკლები specificity-ს მოიცავს.
 
 4. **Element and pseudo-element selectors**: ელემენტ სელექტორები (მაგალითად, `div`, `h1`) და პსევდო-ელემენტები (მაგალითად, `::before`) ყველაზე დაბალ specificity-ს მოიცავს.
-
+ddddddd
 ### CSS specificity-ის პრიორიტეტების სია:
 
 1. **Inline styles** (სტილები HTML-ის `style` ატრიბუტით)  
