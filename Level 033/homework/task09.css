@@ -1,0 +1,4 @@
+/* ნავიგაციის ლინკების uppercase ტექსტის სტილიზაცია */
+nav a {
+    text-transform: uppercase;
+}

@@ -1,0 +1,25 @@
+/* @font-face გამოყენება, რომ ჩამოტვირთოთ და გამოიყენოთ პირადი ფონტი */
+@font-face {
+    font-family: 'BoldFont'; /* თქვენი ფონტის სახელი */
+    src: url('fonts/boldfont.woff2') format('woff2'),
+         url('fonts/boldfont.ttf') format('truetype'); /* ფონტის ფორმატები */
+    font-weight: bold; /* სქელი წონა */
+    font-style: normal; /* სტილი */
+}
+
+/* ღილაკებისთვის (button) BoldFont ფონტის გამოყენება */
+button {
+    font-family: 'BoldFont', sans-serif;
+    font-weight: bold; /* სქელი ტექსტი */
+    padding: 10px 20px; /* padding ღილაკისთვის */
+    background-color: #4CAF50; /* ღილაკის ფონი */
+    color: white; /* ტექსტის ფერი */
+    border: none; /* საზღვარი */
+    border-radius: 5px; /* მსუბუქი საზღვრის რადიუსი */
+    cursor: pointer; /* მაუსის კურსორი */
+    transition: background-color 0.3s ease; /* ტრანზიციის ეფექტი */
+}
+
+button:hover {
+    background-color: #45a049; /* ღილაკის ფონის ცვლილება როცა მასზე დავაკლიკებთ */
+}

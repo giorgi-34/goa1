@@ -1,0 +1,13 @@
+/* @font-face გამოყენება, რათა ჩამოტვირთოთ და გამოიყენოთ პირადი ფონტი */
+@font-face {
+    font-family: 'MyCustomFont'; /* ფონტის სახელი */
+    src: url('fonts/myfont.woff2') format('woff2'),
+         url('fonts/myfont.ttf') format('truetype'); /* ფონტის სხვადასხვა ფორმატები */
+    font-weight: normal; /* წონა */
+    font-style: normal; /* სტილი */
+}
+
+/* ყველა სათაურისთვის (h1, h2, h3, h4, h5, h6) MyCustomFont ფონტის გამოყენება */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'MyCustomFont', sans-serif;
+}

@@ -1,0 +1,5 @@
+/* dashed underline-ი ყველა <a> ელემენტისთვის */
+a {
+    border-bottom: 2px dashed;
+    text-decoration: none; /* ტექსტის ჩვეულებრივი underline არ გვინდა */
+}

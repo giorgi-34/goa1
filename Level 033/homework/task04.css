@@ -1,0 +1,4 @@
+/* ყველა h1 ელემენტისთვის overline-ის დამატება */
+h1 {
+    text-decoration: overline;
+}

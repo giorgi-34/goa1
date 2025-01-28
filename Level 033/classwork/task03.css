@@ -1,0 +1,12 @@
+/* @font-face-ის გამოყენება */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* body-ზე font-family-ის დანიშნვა */
+body {
+    font-family: 'Roboto', sans-serif;
+}

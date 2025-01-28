@@ -1,0 +1,4 @@
+/* ყველა h2 ელემენტისთვის underline და overline-ის დამატება */
+h2 {
+    text-decoration: underline overline;
+}

@@ -1,0 +1,4 @@
+/* warning კლასის მქონე <p> ელემენტებისთვის wavy underline-ი */
+p.warning {
+    text-decoration: underline wavy red; /* ტალღოვანი წითელი underline */
+}

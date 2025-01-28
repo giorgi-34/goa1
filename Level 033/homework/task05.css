@@ -1,0 +1,4 @@
+/* ყველა span ელემენტისთვის strike-through-ის დამატება */
+span {
+    text-decoration: line-through;
+}
