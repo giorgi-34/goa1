@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Input Fields</title>
+  <style>
+    /* Style the input fields */
+    input[type="text"], input[type="password"], input[type="email"], input[type="number"] {
+      border: 2px solid #4CAF50;   /* Green border */
+      padding: 10px;                /* Add padding inside the input field */
+      background-color: #f0f0f0;    /* Light gray background */
+      border-radius: 5px;           /* Rounded corners */
+      font-size: 16px;              /* Font size */
+      width: 100%;                  /* Full width of the container */
+      box-sizing: border-box;       /* Include padding and border in the width calculation */
+      transition: all 0.3s ease;    /* Smooth transition effect */
+    }
+
+    /* Focus state */
+    input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus {
+      border-color: #4CAF90;        /* Darker green border on focus */
+      background-color: #e0ffe0;    /* Light green background when focused */
+      outline: none;                /* Remove the default focus outline */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Styled Input Fields</h2>
+  
+  <!-- Example input fields -->
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" placeholder="Enter your age">
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Focus Effects</title>
+  <style>
+    /* Style for input fields */
+    input[type="text"], input[type="email"], input[type="password"] {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border: 2px solid #ccc;         /* Default light gray border */
+      border-radius: 5px;             /* Rounded corners */
+      background-color: #f9f9f9;      /* Light background */
+      font-size: 16px;                /* Font size */
+      transition: all 0.3s ease;      /* Smooth transition for changes */
+    }
+
+    /* Focus effects */
+    input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+      border-color: #4CAF50;          /* Change border to green */
+      background-color: #e8f5e9;      /* Light green background */
+      outline: none;                  /* Remove default focus outline */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Input Fields with Focus Effects</h2>
+
+  <form>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+  </form>
+
+</body>
+</html>

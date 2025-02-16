@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Error Messages</title>
+  <style>
+    /* General styles for the form */
+    form {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    /* Style for input fields */
+    input[type="text"], input[type="email"], input[type="password"] {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Style for error messages */
+    .error-message {
+      color: red;                  /* Red text for error messages */
+      background-color: #f8d7da;   /* Light red background */
+      border: 1px solid #f5c6cb;   /* Red border around error */
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px 0;
+      font-size: 14px;
+      display: flex;               /* Flexbox to align icon and text */
+      align-items: center;         /* Vertically center the content */
+    }
+
+    /* Icon style */
+    .error-message i {
+      color: #721c24;              /* Dark red icon color */
+      margin-right: 10px;           /* Space between icon and message */
+    }
+
+    /* Optional hover effect for error messages */
+    .error-message:hover {
+      background-color: #f5c6cb;  /* Lighten the background on hover */
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Form with Error Messages</h2>
+
+  <!-- Form with input fields and error messages -->
+  <form>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
+    <div class="error-message">
+      <i class="fa fa-exclamation-circle"></i> <!-- Error icon -->
+      <span>Please enter a valid name.</span>
+    </div>
+
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+    <div class="error-message">
+      <i class="fa fa-exclamation-circle"></i> <!-- Error icon -->
+      <span>Please enter a valid email address.</span>
+    </div>
+
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+    <div class="error-message">
+      <i class="fa fa-exclamation-circle"></i> <!-- Error icon -->
+      <span>Password is required.</span>
+    </div>
+  </form>
+
+  <!-- Add FontAwesome for error icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Submit Button</title>
+  <style>
+    /* Style the submit button */
+    input[type="submit"] {
+      background-color: #4CAF50;   /* Custom green background */
+      color: white;                /* White text */
+      padding: 12px 24px;          /* Add padding inside the button */
+      border: none;                /* Remove default border */
+      border-radius: 8px;          /* Rounded corners */
+      font-size: 16px;             /* Font size */
+      cursor: pointer;            /* Cursor becomes a pointer on hover */
+      transition: all 0.3s ease;   /* Smooth transition effect */
+    }
+
+    /* Hover effect for the submit button */
+    input[type="submit"]:hover {
+      background-color: #45a049;   /* Darker green when hovering */
+      transform: scale(1.05);       /* Slightly enlarge the button */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Styled Submit Button</h2>
+
+  <!-- Form with a submit button -->
+  <form>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>

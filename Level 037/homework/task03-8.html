@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth-child Example</title>
+    <style>
+        ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+        }
+        ul li:nth-child(even) {
+            background-color: #f0f0f0; /* Style every even item */
+        }
+        ul li:nth-child(3n) {
+            color: red; /* Change text color of every third item */
+        }
+        ul li::before {
+            content: "⭐ "; /* Add a custom icon */
+        }
+        ul li:first-child,
+        ul li:last-child {
+            font-weight: bold; /* Make the first and last item bold */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+        <li>Fifth Item</li>
+        <li>Sixth Item</li>
+        <li>Seventh Item</li>
+        <li>Last Item</li>
+    </ul>
+</body>
+</html>
