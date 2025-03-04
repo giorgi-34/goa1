@@ -1,0 +1,27 @@
+Here is the diagram illustrating how the CSS properties `display`, `justify-content`, `align-items`, and `flex-direction` work in a Flexbox layout. 
+
+### **Explanation of each property:**
+1. **`display: flex`**  
+   - This property turns the container into a Flexbox container, allowing its children to be flex items. The items inside the container will now follow Flexbox rules for layout.
+  
+2. **`justify-content`**  
+   - This property controls the alignment of items along the **main axis** (horizontal by default, unless `flex-direction` is changed). It can be set to various values like:
+     - `center` (center the items)
+     - `space-between` (distribute items with equal space between them)
+     - `space-around` (items have equal space around them)
+  
+3. **`align-items`**  
+   - This property controls the alignment of items along the **cross axis** (vertical by default). It can be set to values like:
+     - `stretch` (default: stretches the items to fill the container)
+     - `center` (aligns the items vertically in the center)
+     - `flex-start` (aligns the items at the start of the container)
+     - `flex-end` (aligns the items at the end of the container)
+
+4. **`flex-direction`**  
+   - This property sets the direction of the flex container’s items. By default, items are placed in a **row** (horizontally). However, you can change it to:
+     - `row` (default, horizontal direction)
+     - `column` (vertical direction)
+     - `row-reverse` (reverses the row)
+     - `column-reverse` (reverses the column)
+
+You can see in the diagram how these properties interact and affect the layout of the items inside the container.
