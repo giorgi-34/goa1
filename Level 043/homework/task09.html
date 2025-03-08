@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+
+        body {
+            background-color: #888;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+        }
+
+        .item1 { background-color: #1E90FF; }
+        .item2 { background-color: #32CD32; }
+        .item3 { background-color: #DC143C; }
+        .item4 { background-color: #FFA500; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">Item1</div>
+        <div class="item item2">Item2</div>
+        <div class="item item3">Item3</div>
+        <div class="item item4">Item4</div>
+    </div>
+</body>
+</html>

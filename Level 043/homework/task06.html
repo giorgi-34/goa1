@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>სამ სვეტიანი განლაგება</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+        }
+
+        header {
+            background-color: #ff4500;
+        }
+
+        footer {
+            background-color: #ff1493;
+        }
+
+        .main-content {
+            display: flex;
+            flex: 1;
+        }
+
+        .left-sidebar, .right-sidebar {
+            width: 20%;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .left-sidebar {
+            background-color: #1e90ff;
+        }
+
+        .right-sidebar {
+            background-color: #228b22;
+        }
+
+        .content {
+            flex: 1;
+            background-color: #483d8b;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>HEADER</header>
+        <div class="main-content">
+            <div class="left-sidebar">LEFT SIDEBAR</div>
+            <div class="content">MAIN CONTENT</div>
+            <div class="right-sidebar">RIGHT SIDEBAR</div>
+        </div>
+        <footer>FOOTER</footer>
+    </div>
+
+</body>
+</html>
