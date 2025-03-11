@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-rows: 60px 1fr 60px;
+            grid-template-columns: 200px 1fr;
+            grid-template-areas:
+                "header header"
+                "menu content"
+                "footer footer";
+            height: 100vh;
+        }
+        .header {
+            grid-area: header;
+            background: cyan;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+        }
+        .menu {
+            grid-area: menu;
+            background: red;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .content {
+            grid-area: content;
+            background: orange;
+            text-align: center;
+            padding: 15px;
+        }
+        .footer {
+            grid-area: footer;
+            background: cyan;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="content">Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
