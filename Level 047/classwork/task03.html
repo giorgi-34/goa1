@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Positioning</title>
+    <style>
+        body {
+            background-color: #ddd;
+            text-align: center;
+        }
+        .container {
+            width: 600px;
+            height: 600px;
+            background-color: white;
+            margin: 50px auto;
+            position: relative;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .red { background-color: red; top: 0; left: 0; }
+        .green { background-color: green; top: 0; right: 0; }
+        .blue { background-color: blue; bottom: 0; left: 0; }
+        .purple { background-color: purple; bottom: 0; right: 0; }
+        .footer {
+            width: 120px;
+            height: 80px;
+            background-color: gray;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h2>Absolute Positioning 2</h2>
+    <div class="container">
+        <div class="box red">Red</div>
+        <div class="box green">Green</div>
+        <div class="box blue">Blue</div>
+        <div class="box purple">Purple</div>
+        <div class="box footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Examples</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .center-div {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .image-right {
+            width: 100px;
+            position: absolute;
+            right: 0;
+        }
+        .sticky-header {
+            width: 100%;
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .button-bottom {
+            position: absolute;
+            bottom: 0;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .image-container img {
+            width: 300px;
+        }
+        .image-container .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+        }
+        .footer {
+            width: 100%;
+            background-color: gray;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+        .box-up {
+            position: relative;
+            top: -10px;
+        }
+        .side-by-side {
+            display: flex;
+            gap: 20px;
+        }
+        .float-left {
+            float: left;
+            margin-right: 10px;
+        }
+        .gap-between {
+            position: relative;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-header">Sticky Header</div>
+    <div class="center-div">Centered Div</div>
+    <img src="https://via.placeholder.com/100" class="image-right" alt="Right Image">
+    <div class="image-container">
+        <img src="https://via.placeholder.com/300" alt="Image">
+        <div class="text">Centered Text</div>
+    </div>
+    <div class="side-by-side">
+        <div style="background: lightcoral; width: 100px; height: 100px;">Box 1</div>
+        <div style="background: lightgreen; width: 100px; height: 100px;">Box 2</div>
+    </div>
+    <div class="gap-between" style="background: lightgray; width: 200px; height: 100px;">Gapped Box</div>
+    <div style="width: 200px; height: 200px; position: relative; background: lightyellow;">
+        <button class="button-bottom">Bottom Button</button>
+    </div>
+    <img src="https://via.placeholder.com/100" class="float-left" alt="Left Image">
+    <p>This text wraps around the floated image.</p>
+    <div class="box-up" style="background: lightpink; width: 100px; height: 100px;">Moved Up</div>
+    <div class="footer">Fixed Footer</div>
+</body>
+</html>
