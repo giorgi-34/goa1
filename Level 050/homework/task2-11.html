@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+
+        /* 2. Hover Animation */
+        .hover-button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hover-button:hover {
+            background-color: darkblue;
+        }
+
+        /* 3. Transition Effect */
+        .hover-link {
+            font-size: 18px;
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s;
+        }
+
+        .hover-link:hover {
+            color: red;
+        }
+
+        /* 4. Scaling Effect */
+        .hover-image {
+            width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .hover-image:hover {
+            transform: scale(1.1);
+        }
+
+        /* 5. Text Hover Effect */
+        .hover-text {
+            font-size: 20px;
+            transition: color 0.5s;
+        }
+
+        .hover-text:hover {
+            color: purple;
+        }
+
+        /* 6. Border Animation */
+        .border-box {
+            width: 150px;
+            height: 100px;
+            border: 2px solid black;
+            transition: border-width 0.3s;
+        }
+
+        .border-box:hover {
+            border-width: 6px;
+        }
+
+        /* 7. Button Press Effect */
+        .press-button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        .press-button:active {
+            transform: scale(0.95);
+        }
+
+        /* 8. Opacity Transition */
+        .fade-box {
+            width: 150px;
+            height: 100px;
+            background-color: orange;
+            transition: opacity 0.3s;
+        }
+
+        .fade-box:hover {
+            opacity: 0.5;
+        }
+
+        /* 9. Padding Animation */
+        .padding-box {
+            width: 150px;
+            background-color: teal;
+            padding: 10px;
+            transition: padding 0.3s;
+        }
+
+        .padding-box:hover {
+            padding: 30px;
+        }
+
+        /* 10. Rotation Effect */
+        .rotate-icon {
+            font-size: 40px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .rotate-icon:hover {
+            transform: rotate(15deg);
+        }
+
+        /* 11. Shadow Animation */
+        .shadow-card {
+            width: 200px;
+            height: 120px;
+            background-color: white;
+            box-shadow: 2px 2px 5px gray;
+            transition: box-shadow 0.3s;
+        }
+
+        .shadow-card:hover {
+            box-shadow: 5px 5px 15px black;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="hover-button">Hover Me</button>
+    <a href="#" class="hover-link">Hover Over Me</a>
+    <img src="https://via.placeholder.com/150" class="hover-image" alt="Hover Image">
+    <p class="hover-text">Hover over this text</p>
+    <div class="border-box"></div>
+    <button class="press-button">Press Me</button>
+    <div class="fade-box"></div>
+    <div class="padding-box">Hover Me</div>
+    <span class="rotate-icon">🔄</span>
+    <div class="shadow-card"></div>
+
+</body>
+</html>

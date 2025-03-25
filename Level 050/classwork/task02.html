@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active ანიმაცია</title>
+    <style>
+        .animated-box {
+            width: 200px;
+            height: 100px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            transition: font-size 1s, background-color 2s, color 2s;
+        }
+
+        .animated-box:active {
+            font-size: 25px;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-box">დააჭირე</div>
+</body>
+</html>
