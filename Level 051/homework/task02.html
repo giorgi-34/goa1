@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyframe ანიმაცია</title>
+  <style>
+    /* გვერდის სტილები */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ffffff;
+      overflow: hidden; /* რომ ბურთი ეკრანის გარეთ არ გამოჩნდეს */
+    }
+
+    /* ბურთის სტილები */
+    .ball {
+      width: 50px;
+      height: 50px;
+      background-color: lightblue;
+      border-radius: 50%;
+      position: relative; /* ან absolute, სურვილისამებრ */
+      animation: circleMotion 3s ease-in-out infinite;
+      /* შეგიძლიათ დაამატოთ delay ან სხვა პარამეტრები */
+    }
+
+    /* Keyframes ანიმაცია */
+    @keyframes circleMotion {
+      0% {
+        transform: translate(0, 0) scale(0.5);
+        opacity: 1;
+      }
+      25% {
+        transform: translate(50px, -80px) scale(0.8);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translate(120px, 0) scale(1.2);
+        opacity: 0.6;
+      }
+      75% {
+        transform: translate(180px, 80px) scale(1.5);
+        opacity: 0.4;
+      }
+      100% {
+        transform: translate(240px, 0) scale(2);
+        opacity: 0.2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ball"></div>
+</body>
+</html>

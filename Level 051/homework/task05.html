@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transition Chain</title>
+  <style>
+    body {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .circle {
+      width: 50px;
+      height: 50px;
+      background-color: gold;
+      border-radius: 50%;
+      transition: all 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="circle"></div>
+
+  <script>
+    const circle = document.querySelector('.circle');
+
+    const sizes = [50, 80, 40, 90, 45, 100]; // წრეების ზომების მიმდევრობა
+    let index = 0;
+
+    function nextTransition() {
+      index = (index + 1) % sizes.length;
+      circle.style.width = sizes[index] + 'px';
+      circle.style.height = sizes[index] + 'px';
+    }
+
+    circle.addEventListener('transitionend', nextTransition);
+
+    // პირველი ნაბიჯი ინიცირება
+    setTimeout(() => {
+      nextTransition();
+    }, 500);
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>გადაადგილება და ზომის ცვლილება</title>
+  <style>
+    /* ფონის სეტაპი */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: white;
+      overflow: hidden;
+    }
+
+    /* ბურთის სტილი */
+    .ball {
+      width: 40px;
+      height: 40px;
+      background-color: teal;
+      border-radius: 50%;
+      position: absolute;
+      animation: bounce 3s ease-in-out infinite;
+    }
+
+    /* Keyframe ანიმაცია */
+    @keyframes bounce {
+      0% {
+        transform: translate(0, 0) scale(0.8);
+        opacity: 1;
+      }
+      25% {
+        transform: translate(50px, -80px) scale(1.2);
+        opacity: 0.9;
+      }
+      50% {
+        transform: translate(120px, 0) scale(1.5);
+        opacity: 0.7;
+      }
+      75% {
+        transform: translate(180px, 80px) scale(1.2);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translate(240px, 0) scale(0.8);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ball"></div>
+</body>
+</html>
