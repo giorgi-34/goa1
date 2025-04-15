@@ -1,0 +1,152 @@
+@keyframes moveRight {
+  from { left: 0; }
+  to { left: 300px; }
+}
+
+.box {
+  position: relative;
+  animation: moveRight 5s linear infinite;
+}
+
+
+
+
+
+@keyframes bgColorChange {
+  from { background-color: blue; }
+  to { background-color: red; }
+}
+
+.box {
+  animation: bgColorChange 5s linear infinite;
+}
+
+
+
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.box {
+  animation: rotate 5s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.box {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+
+
+
+
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-100px); }
+}
+
+.ball {
+  animation: bounce 1s ease-in-out 3;
+}
+
+
+
+
+
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+
+
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.box {
+  animation: fadeIn 3s ease forwards;
+}
+
+
+
+
+
+.loop {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.once {
+  animation: pulse 2s ease-in-out forwards;
+}
+
+
+
+
+<!-- JS -->
+<script>
+  const box = document.querySelector('.box');
+  box.addEventListener('click', () => {
+    box.classList.toggle('loop');
+    box.classList.toggle('once');
+  });
+</script>
+
+
+
+
+
+.box {
+  animation: fadeIn 3s ease 2s forwards;
+}
+
+
+
+
+
+
+.box1 {
+  animation: fadeIn 1s ease 0s forwards;
+}
+.box2 {
+  animation: fadeIn 1s ease 1s forwards;
+}
+.box3 {
+  animation: fadeIn 1s ease 2s forwards;
+}
+
+
+
+
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.box {
+  animation: fadeOut 10s ease forwards;
+}

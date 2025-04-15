@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Keyframes ანიმაცია</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+
+      /* ანიმაციის სრული აღწერა ერთ ხაზში */
+      animation: moveBox 5s linear infinite;
+    }
+
+    /* Keyframes ანიმაცია ორი keyframe-ით */
+    @keyframes moveBox {
+      from {
+        left: 0;
+      }
+      to {
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box"></div>
+
+</body>
+</html>
