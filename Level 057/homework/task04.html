@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      background: #1e252d;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-top: 1rem;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: #ccc;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 100px);
+      gap: 10px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(45deg, #f9a, #9ff);
+      font-size: 1.2rem;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .item span {
+      background: white;
+      color: #444;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transform: rotate(45deg);
+      display: inline-block;
+    }
+
+    /* Grid Positions */
+    .item1  { grid-column: 2 / span 3; grid-row: 1 / span 2; background: linear-gradient(45deg, #f9f, #c9f); }
+    .item2  { grid-column: 3 / span 2; grid-row: 4 / span 2; background: linear-gradient(45deg, #d7bfff, #b1baff); }
+    .item3  { grid-column: 5 / span 2; grid-row: 1; background: linear-gradient(45deg, #99f, #9ff); }
+    .item4  { grid-column: 5 / span 2; grid-row: 2; background: linear-gradient(45deg, #8cf, #aef); }
+    .item5  { grid-column: 1; grid-row: 1; background: linear-gradient(45deg, #fc8, #fcb); }
+    .item6  { grid-column: 1; grid-row: 2; background: linear-gradient(45deg, #fc8, #fcb); }
+    .item7  { grid-column: 1; grid-row: 3; background: linear-gradient(45deg, #fc8, #fcb); }
+    .item8  { grid-column: 1; grid-row: 4; background: linear-gradient(45deg, #fc8, #fcb); }
+    .item9  { grid-column: 2; grid-row: 3; background: linear-gradient(45deg, #fc8, #fcb); }
+    .item10 { grid-column: 2; grid-row: 4; background: linear-gradient(45deg, #fc8, #fcb); }
+    .item11 { grid-column: 5; grid-row: 3; background: linear-gradient(45deg, #fc8, #fcb); }
+    .item12 { grid-column: 6; grid-row: 3; background: linear-gradient(45deg, #fc8, #fcb); }
+    .item13 { grid-column: 5; grid-row: 4; background: linear-gradient(45deg, #fc8, #fcb); }
+    .item14 { grid-column: 6; grid-row: 4; background: linear-gradient(45deg, #fc8, #fcb); }
+  </style>
+</head>
+<body>
+
+  <h1>CSS GRID LAYOUT</h1>
+  <p>With @support Flexbox Fallback.</p>
+
+  <div class="grid">
+    <div class="item item1"><span>1</span></div>
+    <div class="item item2"><span>2</span></div>
+    <div class="item item3"><span>3</span></div>
+    <div class="item item4"><span>4</span></div>
+    <div class="item item5"><span>5</span></div>
+    <div class="item item6"><span>6</span></div>
+    <div class="item item7"><span>7</span></div>
+    <div class="item item8"><span>8</span></div>
+    <div class="item item9"><span>9</span></div>
+    <div class="item item10"><span>10</span></div>
+    <div class="item item11"><span>11</span></div>
+    <div class="item item12"><span>12</span></div>
+    <div class="item item13"><span>13</span></div>
+    <div class="item item14"><span>14</span></div>
+  </div>
+
+</body>
+</html>

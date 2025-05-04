@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>სურათის შეცვლა</title>
+</head>
+<body>
+
+  <img 
+    id="myImage" 
+    src="image1.jpg" 
+    alt="სურათი" 
+    width="300" 
+    onclick="changeImage()"
+  >
+
+  <script>
+    function changeImage() {
+      const img = document.getElementById("myImage");
+      img.src = "image2.jpg";
+    }
+  </script>
+
+</body>
+</html>

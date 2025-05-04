@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex დივების განლაგება</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f3f3;
+    }
+
+    .parent {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    .child {
+      flex: 1;
+      height: 150px;
+      background-color: #4a90e2;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 800px) {
+      .parent {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+  </div>
+</body>
+</html>
