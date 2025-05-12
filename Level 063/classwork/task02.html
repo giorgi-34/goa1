@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>მოგესალმები</title>
+</head>
+<body>
+
+  <p id="greeting-text">დაკლიკე აქ მისალმებისთვის</p>
+
+  <script>
+    function greet() {
+      const paragraph = document.getElementById("greeting-text");
+      paragraph.textContent = "welcome ლაშა!"; // შეცვალე "ლაშა" შენს სახელზე
+    }
+
+    const paragraph = document.getElementById("greeting-text");
+    paragraph.addEventListener("click", greet);
+  </script>
+
+</body>
+</html>

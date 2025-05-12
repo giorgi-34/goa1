@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ტექსტის განლაგება</title>
+</head>
+<body>
+
+  <p id="my-paragraph">დააკლიკე ამ ტექსტზე რომ შეიცვალოს განლაგება</p>
+
+  <script>
+    // ფუნქცია, რომელიც ცვლის ტექსტის განლაგებას
+    function changeTextAlignment(id) {
+      const element = document.getElementById(id);
+      element.style.textAlign = "center"; // შეგიძლია შეცვალო: "left", "right", "justify"
+    }
+
+    // ელემენტზე დაჭერისას ფუნქციის გამოძახება
+    const paragraph = document.getElementById("my-paragraph");
+    paragraph.addEventListener("click", function() {
+      changeTextAlignment("my-paragraph");
+    });
+  </script>
+
+</body>
+</html>
