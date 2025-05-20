@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Default Title</title>
+</head>
+<body>
+  <p id="message">Original message</p>
+
+  <script>
+    // 2. Prompt for favorite hobby and show in alert
+    const hobby = prompt("What is your favorite hobby?");
+    alert("Your favorite hobby is: " + hobby);
+
+    // 3. Ask for first and last name, then display full name
+    const firstName = prompt("Enter your first name:");
+    const lastName = prompt("Enter your last name:");
+    alert("Your full name is: " + firstName + " " + lastName);
+
+    // 4. Prompt for a message and update <p> element
+    const userMessage = prompt("Enter a message to display:");
+    document.getElementById("message").textContent = userMessage;
+
+    // 5. Prompt for favorite emoji and show a thank-you alert
+    const emoji = prompt("What's your favorite emoji?");
+    alert("Thanks for sharing! Your favorite emoji is: " + emoji);
+
+    // 6. Prompt for a word and set it as the document title
+    const titleWord = prompt("Enter a word to set as the page title:");
+    document.title = titleWord;
+  </script>
+</body>
+</html>
