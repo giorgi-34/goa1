@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ობიექტის მაგალითები</title>
+</head>
+<body>
+
+  <h2>ობიექტის მაგალითი (2-7 ქვეპუნქტი)</h2>
+
+  <script>
+    // 2. Create an empty object
+    let emptyObj = {};
+    console.log("2. ცარიელი ობიექტი:", emptyObj);
+
+    // 3. Create an object with name, age, city
+    let person = {
+      name: "ანა",
+      age: 20,
+      city: "ბათუმი"
+    };
+    console.log("3. person ობიექტი:", person);
+
+    // 4. Access the value of a property
+    console.log("4. სახელი:", person.name);
+
+    // 5. Add a new property
+    person.role = "სტუდენტი";
+    console.log("5. დამატებულია role:", person);
+
+    // 6. Nested object
+    person.contact = {
+      email: "ana@example.com",
+      phone: "599123456"
+    };
+    console.log("6. ჩადგმული contact ობიექტი:", person);
+
+    // 7. Change a value
+    person.age = 21;
+    console.log("7. განახლებული ასაკი:", person.age);
+
+    // საბოლოო ობიექტი
+    console.log("საბოლოო person ობიექტი:", person);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ფორმის მაგალითი</title>
+</head>
+<body>
+
+  <!-- ფორმა ID-ით -->
+  <form id="myForm">
+    <label for="myInput">შეიყვანე ტექსტი:</label>
+    <input type="text" name="myInput" id="myInput">
+    <button type="submit">გაგზავნა</button>
+  </form>
+
+  <script>
+    // ფორმის მონახვა ID-ით
+    const form = document.getElementById('myForm');
+
+    // ფორმაზე submit-ის მოვლენაზე დამუშავება
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // არ გაარეფრეშოს გვერდი
+
+      // ინფუთის მნიშვნელობის მიღება
+      const inputValue = form.myInput.value;
+
+      // შედეგის ჩვენება alert-ში
+      alert(`შეყვანილი ტექსტია: ${inputValue}`);
+    });
+  </script>
+
+</body>
+</html>

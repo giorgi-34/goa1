@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ლოგიკური ოპერაციები</title>
+</head>
+<body>
+
+  <h2>ლოგიკური ოპერაციების მაგალითები (8-11)</h2>
+
+  <script>
+    // 8. Check if two numbers are both greater than 10
+    let num1 = 15;
+    let num2 = 12;
+    let bothGreaterThan10 = num1 > 10 && num2 > 10;
+    console.log("8. ორივე რიცხვი მეტია 10-ზე?", bothGreaterThan10); // true
+
+    // 9. Check if at least one of two conditions is true
+    let age = 16;
+    let hasPermission = false;
+    let canEnter = age >= 18 || hasPermission;
+    console.log("9. ერთი პირობა მაინც სრულდება?", canEnter); // false
+
+    // 10. Use the NOT operator to invert a boolean value
+    let isLoggedIn = false;
+    console.log("10. მომხმარებელი შესულია?", isLoggedIn);
+    console.log("10. მომხმარებელი არ არის შესული?", !isLoggedIn); // true
+
+    // 11. Combine multiple logical operations in a single expression
+    let score = 85;
+    let passedTest = true;
+    let result = (score > 80 && passedTest) || (score > 90 && !passedTest);
+    console.log("11. საბოლოო შედეგი (კომბინირებული პირობა):", result); // true
+  </script>
+
+</body>
+</html>

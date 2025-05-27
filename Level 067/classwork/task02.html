@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>userOperations ფუნქცია</title>
+</head>
+<body>
+
+  <script>
+    function userOperations() {
+      // ორი confirm-ის შედეგის შენახვა
+      let answer1 = confirm("გსურს პირველი არჩევანი?");
+      let answer2 = confirm("გსურს მეორე არჩევანი?");
+
+      // ლოგიკური ოპერაციები
+      console.log("AND ოპერაცია (answer1 && answer2):", answer1 && answer2);
+      console.log("OR ოპერაცია (answer1 || answer2):", answer1 || answer2);
+    }
+
+    // ფუნქციის გამოძახება ჩატვირთვისას
+    window.onload = userOperations;
+  </script>
+
+</body>
+</html>

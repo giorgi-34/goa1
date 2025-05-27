@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ფორმის მაგალითები</title>
+</head>
+<body>
+
+  <!-- 10. Form with username input -->
+  <form id="userForm">
+    <label>მომხმარებლის სახელი:</label>
+    <input type="text" name="username" id="usernameInput">
+    <button type="submit">გაგზავნა</button>
+  </form>
+
+  <br>
+
+  <!-- 11. Email input + Clear button -->
+  <label>ელ.ფოსტა:</label>
+  <input type="email" name="email" id="emailInput">
+  <button onclick="clearEmail()">წაშლა</button>
+
+  <br><br>
+
+  <!-- 12. Phone input + Alert button -->
+  <label>ტელეფონი:</label>
+  <input type="text" name="phone" id="phoneInput">
+  <button onclick="alertPhone()">ჩვენება</button>
+
+  <script>
+    // 10. On form submit, log username input value
+    document.getElementById('userForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // გვერდი არ განახლდეს
+      const username = event.target.username.value;
+      console.log("Username:", username);
+    });
+
+    // 11. On button click, clear email input
+    function clearEmail() {
+      document.getElementById('emailInput').value = '';
+    }
+
+    // 12. On button click, alert phone input value
+    function alertPhone() {
+      const phone = document.getElementById('phoneInput').value;
+      alert("ტელეფონის ნომერია: " + phone);
+    }
+  </script>
+
+</body>
+</html>
