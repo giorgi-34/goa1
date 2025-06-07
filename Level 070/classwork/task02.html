@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>საკლასო დავალება</title>
+</head>
+<body>
+  <h1 id="mainTitle">სათაური</h1>
+
+  <input type="text" id="myInput" placeholder="შეიყვანეთ ტექსტი">
+  <button id="myButton" onclick="changeElements()">დააწკაპუნე</button>
+
+  <script>
+    function changeElements() {
+      // 1) input-ის value-ის წამოღება და კონსოლში გამოტანა
+      const input = document.getElementById("myInput");
+      console.log("Input value:", input.value);
+
+      // 2) ღილაკის სტილი: შავი ფონი და თეთრი ტექსტი
+      const button = document.getElementById("myButton");
+      button.style.backgroundColor = "black";
+      button.style.color = "white";
+
+      // 3) სათაურის ტექსტი ცენტრში
+      const title = document.getElementById("mainTitle");
+      title.style.textAlign = "center";
+
+      // 4) ფონის ფერი — მწვანე
+      document.body.style.backgroundColor = "green";
+    }
+  </script>
+</body>
+</html>

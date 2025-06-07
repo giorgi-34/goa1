@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Practice Tasks</title>
+</head>
+<body>
+  <h2>2) Check if a Number is Positive or Negative</h2>
+  <button onclick="checkNumberSign()">Check Number</button>
+
+  <h2>3) Check User’s Age for Voting Eligibility</h2>
+  <button onclick="checkVotingAge()">Check Voting Eligibility</button>
+
+  <h2>4) Compare Two Numbers</h2>
+  <button onclick="compareTwoNumbers()">Compare Numbers</button>
+
+  <script>
+    // 2) Check if number is positive, negative or zero
+    function checkNumberSign() {
+      const input = prompt("Enter a number:");
+      const number = Number(input);
+
+      if (isNaN(number)) {
+        alert("Please enter a valid number.");
+      } else if (number > 0) {
+        alert("The number is positive.");
+      } else if (number < 0) {
+        alert("The number is negative.");
+      } else {
+        alert("The number is zero.");
+      }
+    }
+
+    // 3) Check if user can vote
+    function checkVotingAge() {
+      const input = prompt("Enter your age:");
+      const age = Number(input);
+
+      if (isNaN(age)) {
+        alert("Please enter a valid age.");
+      } else if (age >= 18) {
+        alert("You can vote!");
+      } else {
+        alert("You are not eligible to vote.");
+      }
+    }
+
+    // 4) Compare two numbers
+    function compareTwoNumbers() {
+      const first = Number(prompt("Enter the first number:"));
+      const second = Number(prompt("Enter the second number:"));
+
+      if (isNaN(first) || isNaN(second)) {
+        alert("Please enter valid numbers.");
+      } else if (first > second) {
+        alert(`${first} is greater than ${second}.`);
+      } else if (second > first) {
+        alert(`${second} is greater than ${first}.`);
+      } else {
+        alert("Both numbers are equal.");
+      }
+    }
+  </script>
+</body>
+</html>

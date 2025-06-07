@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Programming Tasks</title>
+</head>
+<body>
+
+  <h2>2) Even or Odd</h2>
+  <button onclick="checkEvenOdd()">Check Number</button>
+
+  <h2>3) Grade Assignment</h2>
+  <button onclick="assignGrade()">Get Grade</button>
+
+  <h2>4) Largest Among Three Numbers</h2>
+  <button onclick="largestOfThree()">Find Largest</button>
+
+  <h2>5) Vowel or Consonant</h2>
+  <button onclick="checkVowelOrConsonant()">Check Letter</button>
+
+  <h2>6) Divisible by 3 and 5</h2>
+  <button onclick="checkDivisible()">Check Divisibility</button>
+
+  <h2>7) Age Category</h2>
+  <button onclick="checkAgeCategory()">Check Category</button>
+
+  <h2>8) Print 1 to 5 (while loop)</h2>
+  <button onclick="printOneToFive()">Print Numbers</button>
+
+  <h2>9) Print even numbers 2 to 10 (while loop)</h2>
+  <button onclick="printEvenTwoToTen()">Print Even Numbers</button>
+
+  <h2>10) Print 10 down to 1 (while loop)</h2>
+  <button onclick="printTenToOne()">Print Reverse Numbers</button>
+
+  <h2>11) Print 1 to 10 (for loop)</h2>
+  <button onclick="printOneToTen()">Print Numbers</button>
+
+  <h2>12) First 5 multiples of 3 (for loop)</h2>
+  <button onclick="printMultiplesOfThree()">Print Multiples</button>
+
+  <h2>13) Print 10 to 1 reverse (for loop)</h2>
+  <button onclick="printTenToOneFor()">Print Reverse Numbers</button>
+
+  <h2>14) Print even numbers between 1 and 20 (for loop)</h2>
+  <button onclick="printEvenOneToTwenty()">Print Evens</button>
+
+  <h2>15) Sum numbers 1 to 5 (for loop)</h2>
+  <button onclick="sumOneToFive()">Print Sum</button>
+
+  <script>
+    // 2) Even or Odd
+    function checkEvenOdd() {
+      const num = Number(prompt("Enter a number:"));
+      if (isNaN(num)) {
+        alert("Please enter a valid number.");
+        return;
+      }
+      alert(num % 2 === 0 ? "Number is even." : "Number is odd.");
+    }
+
+    // 3) Grade Assignment
+    function assignGrade() {
+      const score = Number(prompt("Enter your score (0-100):"));
+      if (isNaN(score) || score < 0 || score > 100) {
+        alert("Please enter a valid score between 0 and 100.");
+        return;
+      }
+      let grade;
+      if (score >= 90) grade = "Grade A";
+      else if (score >= 80) grade = "Grade B";
+      else if (score >= 70) grade = "Grade C";
+      else if (score >= 60) grade = "Grade D";
+      else grade = "Fail";
+      alert(grade);
+    }
+
+    // 4) Largest Among Three Numbers
+    function largestOfThree() {
+      const a = Number(prompt("Enter first number:"));
+      const b = Number(prompt("Enter second number:"));
+      const c = Number(prompt("Enter third number:"));
+      if ([a,b,c].some(n => isNaN(n))) {
+        alert("Please enter valid numbers.");
+        return;
+      }
+      if (a === b && b === c) {
+        alert("All numbers are equal.");
+        return;
+      }
+      let largest = a;
+      if (b > largest) largest = b;
+      if (c > largest) largest = c;
+      alert("Largest number is: " + largest);
+    }
+
+    // 5) Vowel or Consonant
+    function checkVowelOrConsonant() {
+      const char = prompt("Enter a single character:").toLowerCase();
+      if (!char || char.length !== 1 || !(/[a-z]/).test(char)) {
+        alert("Please enter a single English alphabet character.");
+        return;
+      }
+      if ("aeiou".includes(char)) {
+        alert(char + " is a vowel.");
+      } else {
+        alert(char + " is a consonant.");
+      }
+    }
+
+    // 6) Divisible by 3 and 5
+    function checkDivisible() {
+      const num = Number(prompt("Enter a number:"));
+      if (isNaN(num)) {
+        alert("Please enter a valid number.");
+        return;
+      }
+      if (num % 3 === 0 && num % 5 === 0) {
+        alert("Divisible by both 3 and 5.");
+      } else if (num % 3 === 0) {
+        alert("Divisible by 3 only.");
+      } else if (num % 5 === 0) {
+        alert("Divisible by 5 only.");
+      } else {
+        alert("Not divisible by either 3 or 5.");
+      }
+    }
+
+    // 7) Age Category
+    function checkAgeCategory() {
+      const age = Number(prompt("Enter your age:"));
+      if (isNaN(age) || age < 0) {
+        alert("Please enter a valid age.");
+        return;
+      }
+      let category;
+      if (age <= 12) category = "Child";
+      else if (age <= 19) category = "Teenager";
+      else if (age <= 59) category = "Adult";
+      else category = "Senior";
+      alert("You are categorized as: " + category);
+    }
+
+    // 8) Print 1 to 5 (while loop)
+    function printOneToFive() {
+      let i = 1;
+      let output = "";
+      while (i <= 5) {
+        output += i + "\n";
+        i++;
+      }
+      alert(output);
+    }
+
+    // 9) Print even numbers 2 to 10 (while loop)
+    function printEvenTwoToTen() {
+      let i = 2;
+      let output = "";
+      while (i <= 10) {
+        output += i + "\n";
+        i += 2;
+      }
+      alert(output);
+    }
+
+    // 10) Print 10 down to 1 (while loop)
+    function printTenToOne() {
+      let i = 10;
+      let output = "";
+      while (i >= 1) {
+        output += i + "\n";
+        i--;
+      }
+      alert(output);
+    }
+
+    // 11) Print 1 to 10 (for loop)
+    function printOneToTen() {
+      let output = "";
+      for (let i = 1; i <= 10; i++) {
+        output += i + "\n";
+      }
+      alert(output);
+    }
+
+    // 12) First 5 multiples of 3 (for loop)
+    function printMultiplesOfThree() {
+      let output = "";
+      for (let i = 1; i <= 5; i++) {
+        output += 3 * i + "\n";
+      }
+      alert(output);
+    }
+
+    // 13) Print 10 to 1 reverse (for loop)
+    function printTenToOneFor() {
+      let output = "";
+      for (let i = 10; i >= 1; i--) {
+        output += i + "\n";
+      }
+      alert(output);
+    }
+
+    // 14) Print even numbers between 1 and 20 (for loop)
+    function printEvenOneToTwenty() {
+      let output = "";
+      for (let i = 2; i <= 20; i += 2) {
+        output += i + "\n";
+      }
+      alert(output);
+    }
+
+    // 15) Sum numbers 1 to 5 (for loop)
+    function sumOneToFive() {
+      let sum = 0;
+      for (let i = 1; i <= 5; i++) {
+        sum += i;
+      }
+      alert("Sum of numbers from 1 to 5 is: " + sum);
+    }
+  </script>
+</body>
+</html>

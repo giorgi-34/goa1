@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>10 in 1 Tasks</title>
+  <style>
+    #colorDiv, #hideDiv {
+      width: 100px; height: 100px; margin-bottom: 10px;
+    }
+    #colorDiv {
+      background: lightblue;
+    }
+    #hideDiv {
+      background: coral;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1) Print numbers from 1 to 10 (console)</h2>
+  <button onclick="printOneToTen()">Run</button>
+
+  <h2>2) Print even numbers 2 to 20 (console)</h2>
+  <button onclick="printEvenTwoToTwenty()">Run</button>
+
+  <h2>3) Print numbers 10 down to 1 (console)</h2>
+  <button onclick="printTenToOne()">Run</button>
+
+  <h2>4) Print first 5 multiples of 3 (console)</h2>
+  <button onclick="printMultiplesOfThree()">Run</button>
+
+  <h2>5) Print each character of string (console)</h2>
+  <button onclick="printChars()">Run</button>
+
+  <h2>6) Change paragraph text</h2>
+  <p id="myPara">Original text</p>
+  <button onclick="changeText()">Change Text</button>
+
+  <h2>7) Change background color of div</h2>
+  <div id="colorDiv"></div>
+  <button onclick="changeBgColor()">Change Color</button>
+
+  <h2>8) Change font size of heading</h2>
+  <h1 id="myHeading">Hello World</h1>
+  <button onclick="changeFontSize()">Change Font Size</button>
+
+  <h2>9) Hide a div</h2>
+  <div id="hideDiv">Hide me!</div>
+  <button onclick="hideDiv()">Hide Div</button>
+
+  <h2>10) Show alert with message</h2>
+  <button onclick="showAlert()">Show Alert</button>
+
+  <script>
+    // 1
+    function printOneToTen() {
+      console.clear();
+      for(let i = 1; i <= 10; i++) {
+        console.log(i);
+      }
+    }
+
+    // 2
+    function printEvenTwoToTwenty() {
+      console.clear();
+      let i = 2;
+      while(i <= 20) {
+        console.log(i);
+        i += 2;
+      }
+    }
+
+    // 3
+    function printTenToOne() {
+      console.clear();
+      for(let i = 10; i >= 1; i--) {
+        console.log(i);
+      }
+    }
+
+    // 4
+    function printMultiplesOfThree() {
+      console.clear();
+      let count = 1;
+      while(count <= 5) {
+        console.log(3 * count);
+        count++;
+      }
+    }
+
+    // 5
+    function printChars() {
+      console.clear();
+      const str = "Hello, world!";
+      for(let i = 0; i < str.length; i++) {
+        console.log(str[i]);
+      }
+    }
+
+    // 6
+    function changeText() {
+      document.getElementById('myPara').textContent = "Text changed!";
+    }
+
+    // 7
+    function changeBgColor() {
+      document.getElementById('colorDiv').style.backgroundColor = 'lightgreen';
+    }
+
+    // 8
+    function changeFontSize() {
+      document.getElementById('myHeading').style.fontSize = '40px';
+    }
+
+    // 9
+    function hideDiv() {
+      document.getElementById('hideDiv').style.display = 'none';
+    }
+
+    // 10
+    function showAlert() {
+      alert('This is a custom alert message!');
+    }
+  </script>
+
+</body>
+</html>

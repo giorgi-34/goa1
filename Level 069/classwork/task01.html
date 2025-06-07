@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ფასდაკლების გამოთვლა</title>
+</head>
+<body>
+  <h2>შეიყვანეთ თქვენი ასაკი ფასდაკლების მისაღებად</h2>
+
+  <button onclick="discountFunc()">ფასდაკლების ნახვა</button>
+
+  <p id="discountResult"></p>
+
+  <script>
+    function discountFunc() {
+      const age = parseInt(prompt("გთხოვთ, შეიყვანეთ თქვენი ასაკი:"));
+      const result = document.getElementById("discountResult");
+
+      if (isNaN(age)) {
+        result.textContent = "გთხოვთ, შეიყვანეთ სწორი ასაკი.";
+      } else if (age < 18) {
+        result.textContent = "თქვენი ფასდაკლებაა: 20%";
+      } else if (age >= 18 && age < 65) {
+        result.textContent = "თქვენი ფასდაკლებაა: 5%";
+      } else {
+        result.textContent = "თქვენი ფასდაკლებაა: 10%";
+      }
+    }
+  </script>
+</body>
+</html>

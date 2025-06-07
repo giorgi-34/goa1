@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>რიცხვების იტერაცია</title>
+</head>
+<body>
+  <h2>შედეგები იხილეთ კონსოლში (Developer Tools → Console)</h2>
+
+  <script>
+    function userLoop() {
+      const start = Number(prompt("შეიყვანეთ პირველი რიცხვი:"));
+      const end = Number(prompt("შეიყვანეთ მეორე რიცხვი:"));
+
+      if (isNaN(start) || isNaN(end)) {
+        console.log("გთხოვთ, მხოლოდ რიცხვები შეიყვანეთ.");
+        return;
+      }
+
+      for (let i = start; i <= end; i++) {
+        console.log(i);
+      }
+    }
+
+    // ფუნქციის ავტომატური გამოძახება ვებსაიტის ჩატვირთვისას
+    window.onload = userLoop;
+  </script>
+</body>
+</html>
