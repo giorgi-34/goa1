@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>საკლასო დავალება</title>
+</head>
+<body>
+
+  <!-- დივ ბლოკი -->
+  <div id="myDiv"></div>
+
+  <!-- ღილაკი ფუნქციის გასაშვებად -->
+  <button onclick="addNewElement()">დაამატე ღილაკი დივში</button>
+
+  <script>
+    function addNewElement() {
+      // 1. წამოიღეთ დივ ბლოკი
+      const div = document.getElementById("myDiv");
+
+      // 2. შექმენით ახალი ღილაკი
+      const newButton = document.createElement("button");
+
+      // 3. შეუწერეთ ტექსტი ორ გზაზე (აირჩიე ერთ-ერთი):
+      
+      // ვარიანტი 1: textContent
+      newButton.textContent = "ახალი ღილაკი";
+
+      // ვარიანტი 2: createTextNode + appendChild
+      // const text = document.createTextNode("ახალი ღილაკი");
+      // newButton.appendChild(text);
+
+      // 4. დაამატეთ ღილაკი დივში
+      div.appendChild(newButton);
+    }
+  </script>
+
+</body>
+</html>

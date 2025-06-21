@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Listeners Examples</title>
+  <style>
+    #colorToggleDiv {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    #toggleImage {
+      display: block;
+      margin-top: 10px;
+      width: 150px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 2) Button for alert -->
+  <button id="alertBtn">Click me for alert</button>
+
+  <!-- 3) Paragraph for hover -->
+  <p id="hoverPara">Hover your mouse over me!</p>
+
+  <!-- 4) Div for background toggle -->
+  <div id="colorToggleDiv">Click me to toggle background color</div>
+
+  <!-- 5) Text input -->
+  <input type="text" id="textInput" placeholder="Click me and check console" />
+
+  <!-- 6) Button to show/hide image -->
+  <button id="toggleImgBtn">Show/Hide Image</button>
+  <img id="toggleImage" src="https://via.placeholder.com/150" alt="Placeholder" style="display:none" />
+
+  <script>
+    // 2) Click Alert
+    document.getElementById("alertBtn").addEventListener("click", function() {
+      alert("Button was clicked!");
+    });
+
+    // 3) Change Text on Hover
+    const hoverPara = document.getElementById("hoverPara");
+    hoverPara.addEventListener("mouseover", function() {
+      hoverPara.textContent = "Thanks for hovering!";
+    });
+    // Optional: revert text on mouseout
+    hoverPara.addEventListener("mouseout", function() {
+      hoverPara.textContent = "Hover your mouse over me!";
+    });
+
+    // 4) Toggle Background Color
+    const colorDiv = document.getElementById("colorToggleDiv");
+    let toggled = false;
+    colorDiv.addEventListener("click", function() {
+      if (toggled) {
+        colorDiv.style.backgroundColor = "lightblue";
+      } else {
+        colorDiv.style.backgroundColor = "lightgreen";
+      }
+      toggled = !toggled;
+    });
+
+    // 5) Log Input Value on click
+    const input = document.getElementById("textInput");
+    input.addEventListener("click", function() {
+      console.log("Input value:", input.value);
+    });
+
+    // 6) Show/Hide Image on Button Click
+    const toggleBtn = document.getElementById("toggleImgBtn");
+    const image = document.getElementById("toggleImage");
+    toggleBtn.addEventListener("click", function() {
+      if (image.style.display === "none") {
+        image.style.display = "block";
+      } else {
+        image.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>

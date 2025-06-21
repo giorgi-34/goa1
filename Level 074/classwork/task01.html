@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>onmouseover Event</title>
+</head>
+<body>
+
+  <!-- პარაგრაფი id-ით -->
+  <p id="myParagraph">გადაატარე მაუსი ამ ტექსტზე</p>
+
+  <script>
+    // 1. წამოიღე პარაგრაფი
+    const para = document.getElementById("myParagraph");
+
+    // 2. გაუწერე onmouseover ღილაკი
+    para.onmouseover = function() {
+      // 3. ტექსტის განლაგება ცენტრში
+      para.style.textAlign = "center";
+    };
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>replaceChild Tasks</title>
+</head>
+<body>
+
+  <!-- 9) დივი რომელშიც შეცვლით <p> -->
+  <div id="textContainer">
+    <p>Original paragraph</p>
+  </div>
+
+  <br>
+
+  <!-- 10) ღილაკი ჩასანაცვლებლად -->
+  <div id="buttonContainer">
+    <button>Click me</button>
+  </div>
+
+  <br>
+
+  <!-- 11) ul ერთითვე li -->
+  <ul id="listOne">
+    <li>Old item</li>
+  </ul>
+
+  <br>
+
+  <!-- 12) h2 ელემენტი -->
+  <div id="headerContainer">
+    <h2>This is an h2 heading</h2>
+  </div>
+
+  <script>
+    // 9) Replace <p> inside #textContainer with a new <p>
+    const textContainer = document.getElementById("textContainer");
+    const oldParagraph = textContainer.querySelector("p");
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "This is the new paragraph!";
+    textContainer.replaceChild(newParagraph, oldParagraph);
+
+    // 10) Replace <button> with <span>
+    const buttonContainer = document.getElementById("buttonContainer");
+    const oldButton = buttonContainer.querySelector("button");
+    const newSpan = document.createElement("span");
+    newSpan.textContent = "This is a span now.";
+    buttonContainer.replaceChild(newSpan, oldButton);
+
+    // 11) Replace single <li> with a new one
+    const list = document.getElementById("listOne");
+    const oldLi = list.querySelector("li");
+    const newLi = document.createElement("li");
+    newLi.textContent = "This is the new list item!";
+    list.replaceChild(newLi, oldLi);
+
+    // 12) Replace <h2> with <h1>
+    const headerContainer = document.getElementById("headerContainer");
+    const oldH2 = headerContainer.querySelector("h2");
+    const newH1 = document.createElement("h1");
+    newH1.textContent = "This is the new h1 heading!";
+    headerContainer.replaceChild(newH1, oldH2);
+  </script>
+
+</body>
+</html>

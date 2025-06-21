@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Click Event Task</title>
+</head>
+<body>
+
+  <!-- ღილაკი ID-ით -->
+  <button id="darkModeBtn">დაკლიკე მუქი რეჟიმისთვის</button>
+
+  <script>
+    // 1. წამოიღე ღილაკი
+    const button = document.getElementById("darkModeBtn");
+
+    // 2. დაამატე მოვლენის მსმენელი
+    button.addEventListener("click", function(event) {
+      // 3. დაბეჭდე event ობიექტი
+      console.log(event);
+
+      // 4. შეცვალე ვებსაიტის ფონის ფერი
+      document.body.style.backgroundColor = "black";
+
+      // 5. შეცვალე ტექსტის ფერი
+      document.body.style.color = "white";
+    });
+  </script>
+
+</body>
+</html>

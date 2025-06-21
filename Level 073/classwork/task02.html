@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>საკლასო დავალება</title>
+</head>
+<body>
+
+  <!-- დივ ბლოკი -->
+  <div id="myDiv">
+    <p>ეს არის პარაგრაფი</p>
+    <button>წაშალე ღილაკი და შეცვალე პარაგრაფი</button>
+  </div>
+
+  <script>
+    function modifyDiv() {
+      const div = document.getElementById("myDiv");
+
+      // 1. ვიპოვოთ და წავშალოთ ღილაკი
+      const button = div.querySelector("button");
+      if (button) {
+        div.removeChild(button);
+      }
+
+      // 2. ვიპოვოთ პარაგრაფი
+      const paragraph = div.querySelector("p");
+      if (paragraph) {
+        // შევქმნათ i თეგი ტექსტით
+        const italic = document.createElement("i");
+        italic.textContent = "ეს არის შეცვლილი ტექსტი i თეგში";
+
+        // ჩავანაცვლოთ პარაგრაფი i თეგით
+        div.replaceChild(italic, paragraph);
+      }
+    }
+
+    // ფუნქცია გაეშვება მაშინვე, როცა გვერდი ჩაიტვირთება
+    window.onload = modifyDiv;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Manipulation Tasks</title>
+</head>
+<body>
+
+  <!-- ცარიელი დივი -->
+  <div id="container"></div>
+
+  <script>
+    // 2) Create a new <p> element and add it to the body
+    const p = document.createElement("p");
+    p.textContent = "This is a paragraph.";
+    document.body.appendChild(p);
+
+    // 3) Create an <h1> element with some text and append it to a <div>
+    const h1 = document.createElement("h1");
+    h1.textContent = "This is a heading";
+    const containerDiv = document.getElementById("container");
+    containerDiv.appendChild(h1);
+
+    // 4) Create an <img> element, set its src and add it to the page
+    const img = document.createElement("img");
+    img.src = "https://via.placeholder.com/150"; // შეიძლება შეცვალო რეალური სურათით
+    img.alt = "Placeholder Image";
+    document.body.appendChild(img);
+
+    // 5) Create a <button> element with the text "Click me"
+    const button = document.createElement("button");
+    button.textContent = "Click me";
+    document.body.appendChild(button);
+
+    // 6) Create a <ul> and add three <li> items to it
+    const ul = document.createElement("ul");
+
+    const li1 = document.createElement("li");
+    li1.textContent = "Item One";
+    ul.appendChild(li1);
+
+    const li2 = document.createElement("li");
+    li2.textContent = "Item Two";
+    ul.appendChild(li2);
+
+    const li3 = document.createElement("li");
+    li3.textContent = "Item Three";
+    ul.appendChild(li3);
+
+    document.body.appendChild(ul);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pointerover Event</title>
+  <style>
+    /* ლინკის სტილი */
+    #myLink {
+      color: blue;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ლინკი id, href, სტილით -->
+  <a id="myLink" href="https://www.example.com" target="_blank" title="Example Link">გადადი Example.com</a>
+
+  <script>
+    // წამოვიღოთ ლინკი
+    const link = document.getElementById("myLink");
+
+    // დავუმატოთ pointerover მოვლენის მსმენელი
+    link.addEventListener("pointerover", function(e) {
+      const target = e.target;
+
+      // ყველა ატრიბუტის სახელებისა და მნიშვნელობების ბეჭდვა
+      for (let attr of target.attributes) {
+        console.log(`${attr.name} = ${attr.value}`);
+      }
+
+      // ბოლოს დაბეჭდეთ თვითონ target ელემენტი
+      console.log("Target element:", target);
+    });
+  </script>
+
+</body>
+</html>

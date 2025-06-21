@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>removeChild Tasks</title>
+</head>
+<body>
+
+  <!-- 7) დივი თავისი შვილი ელემენტებით -->
+  <div id="content">
+    <p>First child (will be removed)</p>
+    <p>Second child</p>
+  </div>
+
+  <br>
+
+  <!-- 8) <ul> სამი <li> ელემენტით -->
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3 (will be removed)</li>
+  </ul>
+
+  <script>
+    // 7) Remove first child from #content div
+    const contentDiv = document.getElementById("content");
+    const firstChild = contentDiv.firstElementChild;
+    if (firstChild) {
+      contentDiv.removeChild(firstChild);
+    }
+
+    // 8) Remove last <li> from <ul>
+    const ul = document.getElementById("myList");
+    const lastItem = ul.lastElementChild;
+    if (lastItem) {
+      ul.removeChild(lastItem);
+    }
+  </script>
+
+</body>
+</html>
