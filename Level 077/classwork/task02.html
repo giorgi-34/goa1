@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array with Interval</title>
+</head>
+<body>
+
+<script>
+  // 1. სია
+  let fruits = ["apple", "banana", "cherry"];
+
+  // 2. ინტერვალი — ყოველი 1 წამში ყველა ელემენტის გამოტანა
+  const interval = setInterval(() => {
+    console.log("Current array:");
+    for (let i = 0; i < fruits.length; i++) {
+      console.log(fruits[i]);
+    }
+    console.log("------");
+  }, 1000);
+
+  // 3. ინტერვალის გარეთ — შევცვალოთ ყველა ელემენტი
+  for (let i = 0; i < fruits.length; i++) {
+    fruits[i] = fruits[i].toUpperCase(); // ან fruits[i] += "!";
+  }
+</script>
+
+</body>
+</html>

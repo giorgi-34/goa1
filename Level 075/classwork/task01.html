@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interval Example</title>
+</head>
+<body>
+
+<button id="stopBtn">გაუქმე ინტერვალი</button>
+
+<script>
+  // ფუნქცია, რომელიც დაბეჭდავს სახელს და გვარს
+  function printName() {
+    console.log("გიორგი გაჩეჩილაძე");
+  }
+
+  // ინტერვალის გაშვება, რომელიც 10 წამში ერთხელ გამოიძახებს printName-ს
+  const intervalId = setInterval(printName, 10000);
+
+  // ღილაკზე კლიკის ივენთ ლისნერი, რომელიც გააუქმებს ინტერვალს
+  document.getElementById("stopBtn").addEventListener("click", function() {
+    clearInterval(intervalId);
+    console.log("ინტერვალი გაუქმდა.");
+  });
+</script>
+
+</body>
+</html>
