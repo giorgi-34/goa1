@@ -1,0 +1,21 @@
+<body>
+  <script>
+    for (let i = 0; i < 5; i++) {
+      const div = document.createElement("div");
+      div.className = "box";
+      div.style.width = "100px";
+      div.style.height = "100px";
+      div.style.backgroundColor = "blue";
+      div.style.borderRadius = "10px";
+      div.style.position = "relative";
+      div.style.margin = "10px";
+      document.body.appendChild(div);
+
+      let pos = 0;
+      setInterval(() => {
+        pos += 5;
+        div.style.left = pos + "px";
+      }, 100);
+    }
+  </script>
+</body>

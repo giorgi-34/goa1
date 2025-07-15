@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paragraph Styling</title>
+</head>
+<body>
+
+  <!-- დივის გარეთ ორი პარაგრაფი -->
+  <p>გარე პარაგრაფი 1</p>
+  <p>გარე პარაგრაფი 2</p>
+
+  <!-- დივ ბლოკი სამი პარაგრაფით -->
+  <div id="myDiv">
+    <p>შიდა პარაგრაფი 1</p>
+    <p>შიდა პარაგრაფი 2</p>
+    <p>შიდა პარაგრაფი 3</p>
+  </div>
+
+  <script>
+    // ვიღებთ დივ ბლოკს
+    const div = document.getElementById("myDiv");
+
+    // ვიღებთ დივში არსებულ ყველა <p> თეგს
+    const paragraphs = div.getElementsByTagName("p");
+
+    // ვუერთდებით ყველა პარაგრაფს და ვუცვლით ფერს
+    for (let i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].style.color = "green";      // ტექსტის ფერი
+      paragraphs[i].style.backgroundColor = "black";  // ფონის ფერი
+    }
+  </script>
+
+</body>
+</html>

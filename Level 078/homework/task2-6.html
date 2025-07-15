@@ -1,0 +1,29 @@
+<script>
+  // 2
+  const allParagraphs = document.querySelectorAll("p");
+  alert("Total <p> tags: " + allParagraphs.length);
+
+  // 3
+  const allH2s = document.querySelectorAll("h2");
+  for (let i = 0; i < allH2s.length; i++) {
+    allH2s[i].style.color = "blue";
+  }
+
+  // 4
+  const allListItems = document.querySelectorAll("li");
+  for (let i = 0; i < allListItems.length; i++) {
+    console.log(allListItems[i].textContent);
+  }
+
+  // 5
+  const allDivs = document.querySelectorAll("div");
+  for (let i = 0; i < allDivs.length; i++) {
+    allDivs[i].style.backgroundColor = "lightgray";
+  }
+
+  // 6
+  const firstImage = document.querySelector("img");
+  if (firstImage) {
+    firstImage.src = "https://via.placeholder.com/150";
+  }
+</script>

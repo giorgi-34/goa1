@@ -1,0 +1,12 @@
+<img src="old.jpg" alt="image">
+<img src="second.jpg" alt="another">
+
+<script>
+  const images = document.getElementsByTagName("img");
+  for (let i = 0; i < images.length; i++) {
+    if (i === 0) {
+      images[i].src = "https://via.placeholder.com/150";
+      break;
+    }
+  }
+</script>

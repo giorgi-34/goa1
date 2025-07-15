@@ -1,0 +1,38 @@
+<button id="startBtn">Start</button>
+
+<script>
+  const btn = document.getElementById("startBtn");
+
+  btn.addEventListener("click", () => {
+    const div = document.createElement("div");
+    div.style.width = "200px";
+    div.style.height = "200px";
+    div.style.backgroundColor = "orange";
+    div.style.margin = "20px";
+    div.style.transition = "all 0.5s";
+    document.body.appendChild(div);
+
+    let count = 1;
+    const shrink = setInterval(() => {
+      const p = document.createElement("p");
+      const text = document.createTextNode("p" + count);
+      p.appendChild(text);
+      document.body.appendChild(p);
+      count++;
+
+      // shrink div
+      let width = parseInt(div.style.width);
+      let height = parseInt(div.style.height);
+      width -= 20;
+      height -= 20;
+
+      if (width <= 0 || height <= 0) {
+        clearInterval(shrink);
+        div.remove();
+      } else {
+        div.style.width = width + "px";
+        div.style.height = height + "px";
+      }
+    }, 3000);
+  });
+</script>

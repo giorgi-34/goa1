@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>საკლასო დავალება</title>
+</head>
+<body>
+
+  <!-- 2. დაულაგებელი სია ობიექტისგან -->
+  <ul id="myList"></ul>
+
+  <script>
+    // 1) Sum numbers until total exceeds 100 (do...while + prompt)
+    let total = 0;
+    do {
+      let input = prompt("შეიყვანეთ რიცხვი (ჯამი უნდა აღემატებოდეს 100-ს):");
+      let num = Number(input);
+      if (!isNaN(num)) {
+        total += num;
+      } else {
+        alert("გთხოვთ შეიყვანოთ სწორი რიცხვი!");
+      }
+    } while (total <= 100);
+    alert("ჯამი აღემატება 100-ს! ჯამი: " + total);
+
+    // 2) ობიექტიდან შექმენით ორფეროვანი დაულაგებელი სია
+    let myObj = {
+      name: "David",
+      surname: "Tezelashvili",
+      academy: "GOA",
+      isMentor: true,
+      num: 100,
+      hobbies: ["programming", "bike", "basketball"],
+      favColor: "Blue"
+    };
+
+    const ul = document.getElementById("myList");
+
+    for (let key in myObj) {
+      let liKey = document.createElement("li");
+      liKey.textContent = key;
+
+      let liValue = document.createElement("li");
+      // თუ მნიშვნელობა არის მასივი, გადაგვიყვანოთ სტრინგად
+      liValue.textContent = Array.isArray(myObj[key]) ? myObj[key].join(", ") : myObj[key];
+
+      ul.appendChild(liKey);
+      ul.appendChild(liValue);
+    }
+
+    // 3) მასივი და for...of ტიპების მიხედვით დასაბეჭდად
+    const arr = ["hello", "world", 10, 25, true, false];
+
+    for (const item of arr) {
+      if (typeof item === "string") {
+        console.log(item);
+      } else if (typeof item === "number") {
+        console.log(item + 10);
+      } else if (typeof item === "boolean") {
+        console.log(!item);
+      }
+    }
+  </script>
+
+</body>
+</html>

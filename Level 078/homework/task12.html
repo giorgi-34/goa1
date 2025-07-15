@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moving Div</title>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: tomato;
+      position: relative; /* აუცილებელია გადაადგილებისთვის */
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="box"></div>
+
+  <script>
+    const box = document.getElementById("box");
+    let position = 0;
+
+    // ყოველ 100 მილიწამში გადაადგილება 5px-ით
+    const move = setInterval(() => {
+      position += 5;
+      box.style.left = position + "px";
+
+      // სურვილის შემთხვევაში შეგიძლიათ შეწყვიტოთ კონკრეტულ პოზიციაზე
+      if (position >= 500) {
+        clearInterval(move);
+      }
+    }, 100);
+  </script>
+
+</body>
+</html>

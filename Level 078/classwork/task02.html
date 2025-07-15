@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>დივ ბლოკში პარაგრაფების დამატება</title>
+</head>
+<body>
+
+  <!-- დივ ბლოკი -->
+  <div id="myDiv"></div>
+
+  <script>
+    // ვიღებთ დივ ბლოკს
+    const div = document.getElementById("myDiv");
+
+    // for ციკლით 5-ჯერ იტერაცია
+    for (let i = 1; i <= 5; i++) {
+      // ვქმნით ახალ პარაგრაფ ელემენტს
+      const p = document.createElement("p");
+
+      // ვაყენებთ ტექსტს
+      p.textContent = "ეს არის პარაგრაფი ნომერი " + i;
+
+      // ვამატებთ პარაგრაფს დივში
+      div.appendChild(p);
+    }
+  </script>
+
+</body>
+</html>
