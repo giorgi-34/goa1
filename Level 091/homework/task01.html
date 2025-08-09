@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product List with Cart</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fefaf7;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        margin-bottom: 10px;
+    }
+    .container {
+        display: flex;
+        gap: 20px;
+    }
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+        flex: 2;
+    }
+    .product {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .product img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+    }
+    .product h3 {
+        font-size: 16px;
+        margin: 8px 0 4px;
+    }
+    .product p {
+        margin: 0;
+        color: #e67e22;
+        font-weight: bold;
+    }
+    .product button {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 6px;
+    }
+    .cart {
+        flex: 1;
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .cart h2 {
+        margin-top: 0;
+    }
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+    .total {
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+    .confirm-btn {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Product list with cart</h1>
+<div class="container">
+    <div class="products">
+        <div class="product">
+            <img src="https://via.placeholder.com/200x120" alt="Product">
+            <h3>Waffle with Berries</h3>
+            <p>$6.50</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200x120" alt="Product">
+            <h3>Vanilla Bean Crème Brûlée</h3>
+            <p>$7.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200x120" alt="Product">
+            <h3>Macaron Mix of Five</h3>
+            <p>$8.00</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>Cart</h2>
+        <div class="cart-item">
+            <span>Classic Tiramisu</span>
+            <span>$5.50</span>
+        </div>
+        <div class="cart-item">
+            <span>Vanilla Crème Brûlée x4</span>
+            <span>$28.00</span>
+        </div>
+        <div class="cart-item">
+            <span>Panna Cotta x2</span>
+            <span>$13.00</span>
+        </div>
+        <div class="total">Total: $46.50</div>
+        <button class="confirm-btn">Confirm Order</button>
+    </div>
+</div>
+
+</body>
+</html>
