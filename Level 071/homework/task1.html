@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Homework</title>
+</head>
+<body>
+  <h1>საკლასო დავალებები</h1>
+  <script>
+    // =====================
+    // Homework 1: Array Basics
+    // =====================
+    let fruits = ["ვაშლი", "მსხალი", "ბანანი", "ატამი", "საზამთრო"];
+    console.log("Homework 1");
+    console.log("პირველი:", fruits[0]);
+    console.log("ბოლო:", fruits[fruits.length - 1]);
+    console.log("ჯამში რამდენია:", fruits.length);
+
+    // =====================
+    // Homework 2: Modifying Arrays
+    // =====================
+    let colors = ["red", "green", "blue"];
+    colors.push("yellow");        // ბოლოში დაამატე
+    colors.shift();               // პირველი ამოშალე
+    colors.unshift("purple");     // დასაწყისში დაამატე
+    console.log("Homework 2");
+    console.log(colors);
+
+    // =====================
+    // Homework 3: Loop Through an Array
+    // =====================
+    let numbers = [2, 3, 4, 5];
+    console.log("Homework 3 - გაორმაგებული:");
+    for (let i = 0; i < numbers.length; i++) {
+      console.log(numbers[i] * 2);
+    }
+
+    // =====================
+    // Homework 4: sumArray ფუნქცია
+    // =====================
+    function sumArray(arr) {
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+      return sum;
+    }
+    console.log("Homework 4 - ჯამი:", sumArray([1, 2, 3]));
+
+    // =====================
+    // Homework 5: Find the Largest Number
+    // =====================
+    function findLargest(arr) {
+      let max = arr[0];
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+          max = arr[i];
+        }
+      }
+      return max;
+    }
+    console.log("Homework 5 - ყველაზე დიდი:", findLargest([4, 7, 1, 9, 2]));
+
+    // =====================
+    // Homework 6: Array Includes Check
+    // =====================
+    let movies = ["Inception", "Avatar", "Titanic", "Interstellar", "Joker"];
+    let userMovie = prompt("შეიყვანე ფილმის სახელი:");
+    if (movies.includes(userMovie)) {
+      alert("Yes, it's one of my favorites!");
+    } else {
+      alert("No, I don't like that one much.");
+    }
+
+    // =====================
+    // Homework 7: Join and Sort
+    // =====================
+    let words = ["banana", "apple", "pear", "orange"];
+    words.sort();
+    console.log("Homework 7:", words.join(", "));
+
+    // =====================
+    // Extra Homework 1: Random Number 1–10
+    // =====================
+    function random1to10() {
+      return Math.floor(Math.random() * 10) + 1;
+    }
+    console.log("Extra 1 - Random 1-10:", random1to10());
+
+    // =====================
+    // Extra Homework 2: Rounding
+    // =====================
+    let decimal = prompt("შეიყვანე ათობითი რიცხვი:");
+    decimal = parseFloat(decimal);
+    console.log("Extra 2 - Math.floor:", Math.floor(decimal));
+    console.log("Extra 2 - Math.ceil:", Math.ceil(decimal));
+    console.log("Extra 2 - Math.round:", Math.round(decimal));
+
+    // =====================
+    // Extra Homework 3: Max & Min
+    // =====================
+    let nums = [10, 25, 3, 99, 7];
+    console.log("Extra 3 - ყველაზე დიდი:", Math.max(...nums));
+    console.log("Extra 3 - ყველაზე პატარა:", Math.min(...nums));
+  </script>
+</body>
+</html>

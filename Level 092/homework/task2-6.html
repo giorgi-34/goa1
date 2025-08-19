@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codewars 7kyu Solutions</title>
+</head>
+<body>
+  <h1>Codewars Solutions (Console)</h1>
+  <script>
+    // ==============================
+    // 1) Fix string case
+    // ==============================
+    function fixStringCase(s) {
+      const upperCount = (s.match(/[A-Z]/g) || []).length;
+      const lowerCount = (s.match(/[a-z]/g) || []).length;
+      return upperCount > lowerCount ? s.toUpperCase() : s.toLowerCase();
+    }
+    console.log("Fix string case:", fixStringCase("abcDEF")); // "abcdef"
+
+
+    // ==============================
+    // 2) Number of Decimal Digits
+    // ==============================
+    function digitsCount(n) {
+      return String(n).length;
+    }
+    console.log("Number of Decimal Digits:", digitsCount(987654)); // 6
+
+
+    // ==============================
+    // 3) The Coupon Code
+    // ==============================
+    // description: verify coupon code and expiration
+    function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+      return enteredCode === correctCode &&
+             Date.parse(currentDate) <= Date.parse(expirationDate);
+    }
+    console.log("The Coupon Code:", 
+      checkCoupon("123", "123", "July 9, 2015", "July 9, 2015")); // true
+
+
+    // ==============================
+    // 4) Are the numbers in order?
+    // ==============================
+    function inAscOrder(arr) {
+      for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] > arr[i + 1]) return false;
+      }
+      return true;
+    }
+    console.log("Are the numbers in order?:", inAscOrder([1, 2, 3, 4])); // true
+    console.log("Are the numbers in order?:", inAscOrder([1, 3, 2]));   // false
+
+
+    // ==============================
+    // 5) Flatten and sort an array
+    // ==============================
+    function flattenAndSort(array) {
+      return [].concat(...array).sort((a, b) => a - b);
+    }
+    console.log("Flatten and sort:", flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]));
+    // [1,2,3,4,5,6,7,8,9]
+
+
+    // ==============================
+    // 6) Factorial
+    // ==============================
+    function factorial(n) {
+      if (n < 0) return null;
+      let result = 1;
+      for (let i = 2; i <= n; i++) {
+        result *= i;
+      }
+      return result;
+    }
+    console.log("Factorial 5:", factorial(5)); // 120
+
+
+    // ==============================
+    // 7) Maximum Length Difference
+    // ==============================
+    function mxdiflg(a1, a2) {
+      if (a1.length === 0 || a2.length === 0) return -1;
+      let lengths1 = a1.map(x => x.length);
+      let lengths2 = a2.map(x => x.length);
+      let max1 = Math.max(...lengths1), min1 = Math.min(...lengths1);
+      let max2 = Math.max(...lengths2), min2 = Math.min(...lengths2);
+      return Math.max(Math.abs(max1 - min2), Math.abs(max2 - min1));
+    }
+    console.log("Maximum Length Difference:",
+      mxdiflg(["aaa","bb"], ["cccc","d","eeeeee"])); // 5
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codewars Solutions</title>
+</head>
+<body>
+  <h1>Codewars 7 kyu Solutions</h1>
+  <script>
+    // ================
+    // 1) Fix string case
+    // ================
+    function fixStringCase(s) {
+      const upperCount = (s.match(/[A-Z]/g) || []).length;
+      const lowerCount = (s.match(/[a-z]/g) || []).length;
+      return upperCount > lowerCount ? s.toUpperCase() : s.toLowerCase();
+    }
+
+    console.log("Fix string case:");
+    console.log(fixStringCase("abcDEF"));   // → "abcdef"
+    console.log(fixStringCase("ABCdef"));   // → "abcdef"
+    console.log(fixStringCase("HELLO"));    // → "HELLO"
+    console.log(fixStringCase("hello"));    // → "hello"
+
+
+    // =========================
+    // 2) Number of Decimal Digits
+    // =========================
+    function digitsCount(n) {
+      return String(n).length;
+    }
+
+    console.log("Number of Decimal Digits:");
+    console.log(digitsCount(0));        // → 1
+    console.log(digitsCount(7));        // → 1
+    console.log(digitsCount(123));      // → 3
+    console.log(digitsCount(987654));   // → 6
+  </script>
+</body>
+</html>

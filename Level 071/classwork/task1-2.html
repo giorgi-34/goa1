@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>საკლასო დავალება</title>
+</head>
+<body>
+  <h2>სიების მაგალითი</h2>
+  <script>
+    // --- სიები ---
+
+    // 1. რიცხვების სია
+    let numbers = [1, 2, 3, 4, 5];
+    console.log("რიცხვების სია:", numbers);
+    console.log("length:", numbers.length);
+
+    let moreNumbers = [6, 7, 8];
+    let combinedNumbers = numbers.concat(moreNumbers);
+    console.log("concat:", combinedNumbers);
+
+    // 2. ტექსტების სია
+    let fruits = ["ვაშლი", "მსხალი", "ატამი"];
+    console.log("ხილის სია:", fruits);
+    console.log("length:", fruits.length);
+
+    let moreFruits = ["ბანანი", "საზამთრო"];
+    let combinedFruits = fruits.concat(moreFruits);
+    console.log("concat:", combinedFruits);
+
+    // 3. შერეული სია
+    let mixed = [1, "გამარჯობა", true];
+    console.log("შერეული სია:", mixed);
+    console.log("length:", mixed.length);
+
+    let extra = [null, "დასასრული"];
+    let combinedMixed = mixed.concat(extra);
+    console.log("concat:", combinedMixed);
+
+    // --- რანდომ რიცხვის თამაში ---
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    let guess = prompt("შეიყვანე რიცხვი 1-დან 100-მდე:");
+
+    if (guess > randomNumber) {
+        alert("მეტია");
+    } else if (guess < randomNumber) {
+        alert("ნაკლებია");
+    } else {
+        alert("გილოცავ! სწორად გამოიცანი 🎉");
+    }
+  </script>
+</body>
+</html>
